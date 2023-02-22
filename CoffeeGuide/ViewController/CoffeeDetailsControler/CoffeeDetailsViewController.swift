@@ -58,7 +58,7 @@ extension CoffeeDetailsViewController {
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
                 
         coffeeDetailsCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        coffeeDetailsCollectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CoffeeCell")
+        coffeeDetailsCollectionView?.register(CoffeeDetailsImageCell.self, forCellWithReuseIdentifier: "CoffeeDetailsImageCell")
         coffeeDetailsCollectionView?.backgroundColor = UIColor.blue
         
         collectionContainerView.addSubview(coffeeDetailsCollectionView ?? UICollectionView())
@@ -66,22 +66,17 @@ extension CoffeeDetailsViewController {
         self.view = collectionContainerView
     }
     
-    private func configureCell(cell: UICollectionViewCell) -> UICollectionViewCell {
-        cell.backgroundColor = UIColor.brown
-        
-        return cell
-    }
 }
 
 extension CoffeeDetailsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let coffeeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeCell", for: indexPath)
+        let coffeeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeDetailsImageCell", for: indexPath)
         
-        return configureCell(cell: coffeeCell)
+        return coffeeCell
     }
 }
 

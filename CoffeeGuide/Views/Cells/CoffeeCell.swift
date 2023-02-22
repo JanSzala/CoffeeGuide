@@ -13,7 +13,7 @@ class CoffeeCell: UICollectionViewCell {
         
     override init(frame: CGRect) {
         super.init(frame: frame)
-        print("Custom Cell Init")
+        print("CoffeeCell Init")
         
         configureContetStackView(width: frame.width, height: frame.height)
                                

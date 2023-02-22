@@ -40,7 +40,7 @@ extension CoffeeViewController {
     
     private func setCollectionView() {
         let collectionContainerView = UIView()
-                
+        
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         
@@ -48,7 +48,7 @@ extension CoffeeViewController {
         let cellHeight = 220.0
         
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
-                
+        
         coffeeCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         coffeeCollectionView?.register(CoffeeCell.self, forCellWithReuseIdentifier: "CoffeeCell")
         coffeeCollectionView?.backgroundColor = UIColor.blue
@@ -59,7 +59,7 @@ extension CoffeeViewController {
         }
         
         collectionContainerView.addSubview(collectionView)
-                
+        
         self.view = collectionContainerView
     }
 }

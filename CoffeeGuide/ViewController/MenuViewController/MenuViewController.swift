@@ -40,6 +40,7 @@ extension MenuViewController {
 
 private extension MenuViewController {
     private func addCoffeeButton() {
+        
         let button = UIButton(frame: CGRect(x: 10, y: 100, width: 200, height: 50))
         button.backgroundColor = .green
         button.setTitle("Coffee Button", for: .normal)
@@ -49,7 +50,6 @@ private extension MenuViewController {
     }
     
     @objc private func buttonAction(sender: UIButton!) {
-        print("Button tapped")
         viewModel?.onCoffeeButtonTapped?()
     }
 }
