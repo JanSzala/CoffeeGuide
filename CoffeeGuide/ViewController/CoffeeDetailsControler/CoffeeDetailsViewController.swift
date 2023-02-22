@@ -50,15 +50,17 @@ extension CoffeeDetailsViewController {
         collectionContainerView.backgroundColor = .white
                 
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
-        let cellWidth = self.view.frame.width - 20
+        let cellWidth = self.view.frame.width
         let cellHeight = 400.0
         
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
                 
         coffeeDetailsCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         coffeeDetailsCollectionView?.register(CoffeeDetailsImageCell.self, forCellWithReuseIdentifier: "CoffeeDetailsImageCell")
+        coffeeDetailsCollectionView?.register(CoffeeDetailsNameDescriptionCell.self, forCellWithReuseIdentifier: "CoffeeDetailsNameDescriptionCell")
+        
         coffeeDetailsCollectionView?.backgroundColor = UIColor.blue
         
         collectionContainerView.addSubview(coffeeDetailsCollectionView ?? UICollectionView())
@@ -74,9 +76,13 @@ extension CoffeeDetailsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let coffeeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeDetailsImageCell", for: indexPath)
-        
-        return coffeeCell
+        if indexPath.row == 0 {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeDetailsImageCell", for: indexPath)
+        } else if indexPath.row == 1 {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeDetailsNameDescriptionCell", for: indexPath)
+        } else {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeDetailsImageCell", for: indexPath)
+        }
     }
 }
 

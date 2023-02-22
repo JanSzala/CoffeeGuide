@@ -9,20 +9,14 @@ import UIKit
 import Foundation
 
 class CoffeeCell: UICollectionViewCell {
-    var stackView: UIStackView?
         
     override init(frame: CGRect) {
         super.init(frame: frame)
         print("CoffeeCell Init")
         
-        configureContetStackView(width: frame.width, height: frame.height)
-                               
-        guard let contentStackView = stackView else {
-            fatalError("Could not find the contentStackView")
-        }
-        
+        let contentStackView = configureContetStackView(width: frame.width, height: frame.height)
+                                       
         contentView.addSubview(contentStackView)
-        
         contentStackView.addArrangedSubview(coffeeImageView())
         contentStackView.addArrangedSubview(coffeeManufacturerLabel())
         contentStackView.addArrangedSubview(coffeeNameLabel())
@@ -35,11 +29,11 @@ class CoffeeCell: UICollectionViewCell {
 }
 
 extension CoffeeCell {
-    private func configureContetStackView(width: CGFloat, height: CGFloat) {
+    private func configureContetStackView(width: CGFloat, height: CGFloat) -> UIStackView {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.frame = CGRect(x: 0, y: 0, width: width, height: height)
-        self.stackView = stackView
+        return stackView
     }
     
     private func coffeeImageView() -> UIImageView {
