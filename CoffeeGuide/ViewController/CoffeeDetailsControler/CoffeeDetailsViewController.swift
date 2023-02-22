@@ -55,11 +55,13 @@ extension CoffeeDetailsViewController {
         let cellWidth = self.view.frame.width
         let cellHeight = 400.0
         
+        
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
                 
         coffeeDetailsCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         coffeeDetailsCollectionView?.register(CoffeeDetailsImageCell.self, forCellWithReuseIdentifier: "CoffeeDetailsImageCell")
         coffeeDetailsCollectionView?.register(CoffeeDetailsNameDescriptionCell.self, forCellWithReuseIdentifier: "CoffeeDetailsNameDescriptionCell")
+        coffeeDetailsCollectionView?.register(CoffeePropertiesCell.self, forCellWithReuseIdentifier: "CoffeePropertiesCell")
         
         coffeeDetailsCollectionView?.backgroundColor = UIColor.blue
         
@@ -80,6 +82,8 @@ extension CoffeeDetailsViewController: UICollectionViewDataSource {
             return collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeDetailsImageCell", for: indexPath)
         } else if indexPath.row == 1 {
             return collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeDetailsNameDescriptionCell", for: indexPath)
+        } else if indexPath.row == 2 {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeePropertiesCell", for: indexPath)
         } else {
             return collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeDetailsImageCell", for: indexPath)
         }
