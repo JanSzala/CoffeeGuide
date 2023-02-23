@@ -55,7 +55,6 @@ extension CoffeeDetailsViewController {
         let cellWidth = self.view.frame.width
         let cellHeight = 400.0
         
-        
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
                 
         coffeeDetailsCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
