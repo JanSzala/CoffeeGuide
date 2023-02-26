@@ -34,15 +34,17 @@ extension MenuViewController {
     func setupView() {
         view.backgroundColor = .blue
         
-        addCoffeeButton()
+        configureCoffeeButton()
     }
 }
 
 private extension MenuViewController {
-    private func addCoffeeButton() {
+    private func configureCoffeeButton() {
+        let buttonHeight = 50.0
+        let buttonWidth = 200.0
         
-        let button = UIButton(frame: CGRect(x: 10, y: 100, width: 200, height: 50))
-        button.backgroundColor = .green
+        let button = UIButton(frame: CGRect(x: (self.view.frame.width * 0.5) - buttonWidth/2, y: 300, width: buttonWidth, height: buttonHeight))
+        button.backgroundColor = .red
         button.setTitle("Coffee Button", for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 
