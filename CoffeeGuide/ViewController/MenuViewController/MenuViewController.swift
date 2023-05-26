@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-internal class MenuViewController: UIViewController {
+internal class MenuViewController: UITabBarController {
     var viewModel: MenuViewModelType?
     
     // MARK: - Initializers
@@ -27,14 +27,43 @@ internal class MenuViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+        
+        view.backgroundColor = UIColor.white
+        UITabBar.appearance().barTintColor = UIColor.white
+        tabBar.tintColor = UIColor.black
+        tabBar.backgroundColor = UIColor.white
+        setupVCs()
     }
+    
+    fileprivate func createNavController(for rootViewController: UIViewController, title: String) -> UIViewController {
+            let navController = UINavigationController(rootViewController: rootViewController)
+            navController.tabBarItem.title = title
+            navController.navigationBar.prefersLargeTitles = false
+            return navController
+        }
+    
+    func setupVCs() {
+        let controller_1 = UIViewController()
+        controller_1.view.backgroundColor = UIColor.blue
+        
+        let controller_2 = UIViewController()
+        controller_2.view.backgroundColor = UIColor.red
+        
+            viewControllers = [
+                createNavController(for: controller_1, title: "Coffee"),
+                createNavController(for: controller_2, title: "Cafe"),
+                createNavController(for: UIViewController(), title: "Fav"),
+                createNavController(for: UIViewController(), title: "Roasters"),
+                createNavController(for: UIViewController(), title: "Profile")
+            ]
+        }
 }
 
 extension MenuViewController {
     func setupView() {
         view.backgroundColor = .blue
         
-        configureCoffeeButton()
+//        configureCoffeeButton()
     }
 }
 
