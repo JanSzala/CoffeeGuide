@@ -26,44 +26,30 @@ internal class MenuViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupView()
+        guard let controller = viewModel?.controllers.count else {
+            fatalError("No tab bar controllers in the View Model")
+        }
         
-        view.backgroundColor = UIColor.white
-        UITabBar.appearance().barTintColor = UIColor.white
-        tabBar.tintColor = UIColor.black
-        tabBar.backgroundColor = UIColor.white
-        setupVCs()
+        print("Controller count: \(controller)")
+        
+        setTabBar()
+        insertTabBarControllers()
     }
-    
-    fileprivate func createNavController(for rootViewController: UIViewController, title: String) -> UIViewController {
-            let navController = UINavigationController(rootViewController: rootViewController)
-            navController.tabBarItem.title = title
-            navController.navigationBar.prefersLargeTitles = false
-            return navController
-        }
-    
-    func setupVCs() {
-        let controller_1 = UIViewController()
-        controller_1.view.backgroundColor = UIColor.blue
-        
-        let controller_2 = UIViewController()
-        controller_2.view.backgroundColor = UIColor.red
-        
-            viewControllers = [
-                createNavController(for: controller_1, title: "Coffee"),
-                createNavController(for: controller_2, title: "Cafe"),
-                createNavController(for: UIViewController(), title: "Fav"),
-                createNavController(for: UIViewController(), title: "Roasters"),
-                createNavController(for: UIViewController(), title: "Profile")
-            ]
-        }
 }
 
 extension MenuViewController {
-    func setupView() {
-        view.backgroundColor = .blue
+    private func setTabBar() {
+        UITabBar.appearance().barTintColor = UIColor.white
+        tabBar.tintColor = UIColor.black
+        tabBar.backgroundColor = UIColor.white
+    }
+    
+    private func insertTabBarControllers() {
+        guard let controllers = viewModel?.tabBarViewControllers() else {
+            fatalError("Could not find tab bar view controllers in viewModel")
+        }
         
-//        configureCoffeeButton()
+        viewControllers = controllers
     }
 }
 

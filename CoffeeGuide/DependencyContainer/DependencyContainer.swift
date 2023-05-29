@@ -13,7 +13,14 @@ internal class DependencyContainer: DependencyContainerType {
     }
     
     var menuViewModel: MenuViewModelType {
-        MenuViewModel()
+        let viewModel = MenuViewModel()
+        
+        viewModel.controllers = [
+            coffeeViewController(with: coffeeViewModel),
+            cafeViewController(with: cafeViewModel)
+            ]
+        
+        return viewModel
     }
     
     func coffeeViewController(with viewModel: CoffeeViewModelType) -> CoffeeViewController {

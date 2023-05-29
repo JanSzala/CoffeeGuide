@@ -75,27 +75,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		222FD8FD299E1E890070E4A3 /* LoginOrRegisterViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginOrRegisterViewController;
-			sourceTree = "<group>";
-		};
-		222FD8FE299E1E980070E4A3 /* LoginViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginViewController;
-			sourceTree = "<group>";
-		};
-		222FD8FF299E1EA30070E4A3 /* RegisterViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RegisterViewController;
-			sourceTree = "<group>";
-		};
 		222FD900299E60660070E4A3 /* CoffeeDetailsControler */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,9 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				222FD900299E60660070E4A3 /* CoffeeDetailsControler */,
-				222FD8FF299E1EA30070E4A3 /* RegisterViewController */,
-				222FD8FE299E1E980070E4A3 /* LoginViewController */,
-				222FD8FD299E1E890070E4A3 /* LoginOrRegisterViewController */,
 				2270AD22292A1C8C00DB5F14 /* CafeViewController */,
 				22C0250D28C7D7C500974381 /* CoffeeViewController */,
 				22525D1628A157E700B061D7 /* MenuViewController */,
