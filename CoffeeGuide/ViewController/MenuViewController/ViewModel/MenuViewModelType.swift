@@ -9,8 +9,7 @@ import UIKit
 import Foundation
 
 internal protocol MenuViewModelType {
-    var onCoffeeButtonTapped: (() -> ())? { get set }
-    var controllers: [UIViewController] { get set }
+    var controllers: [UIViewController?] { get set }
     
     func tabBarViewControllers() -> [UIViewController]
 }

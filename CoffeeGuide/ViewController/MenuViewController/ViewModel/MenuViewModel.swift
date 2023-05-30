@@ -9,19 +9,20 @@ import UIKit
 import Foundation
 
 internal class MenuViewModel: MenuViewModelType {
-    var onCoffeeButtonTapped: (() -> ())?
-    var controllers: [UIViewController] = []
+    var controllers: [UIViewController?] = []
     
     func tabBarViewControllers() -> [UIViewController] {
-        let controller_1 = UIViewController()
-        controller_1.view.backgroundColor = UIColor.blue
+        guard let controller1 = controllers[0] else {
+            fatalError("Could not find Controller 1 for TabController")
+        }
         
-        let controller_2 = UIViewController()
-        controller_2.view.backgroundColor = UIColor.red
+        guard let controller2 = controllers[1] else {
+            fatalError("Could not find Controller 2 for TabController")
+        }
         
         return [
-            createNavController(for: controller_1, title: "Coffee"),
-            createNavController(for: controller_2, title: "Cafe"),
+            createNavController(for: controller1, title: "Coffee"),
+            createNavController(for: controller2, title: "Cafe"),
             createNavController(for: UIViewController(), title: "Fav"),
             createNavController(for: UIViewController(), title: "Roasters"),
             createNavController(for: UIViewController(), title: "Profile")
@@ -31,7 +32,7 @@ internal class MenuViewModel: MenuViewModelType {
     fileprivate func createNavController(for rootViewController: UIViewController, title: String) -> UIViewController {
             let navController = UINavigationController(rootViewController: rootViewController)
             navController.tabBarItem.title = title
-            navController.navigationBar.prefersLargeTitles = false
+            navController.navigationBar.isHidden = true
             return navController
         }
 }

@@ -24,11 +24,7 @@ internal class FlowController: FlowControllerType {
 
 extension FlowController {
     func showMenuViewController() {
-        var viewModel = dependencyContainer.menuViewModel
-        
-        viewModel.onCoffeeButtonTapped = {
-            self.showCoffeeViewController()
-        }
+        let viewModel = dependencyContainer.menuViewModel
         
         let controller = dependencyContainer.menuViewController(with: viewModel)
         

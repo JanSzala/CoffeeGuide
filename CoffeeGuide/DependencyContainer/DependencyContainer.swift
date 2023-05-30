@@ -5,6 +5,7 @@
 //  Created by GLaDOS on 08/08/2022.
 //
 
+import UIKit
 import Foundation
 
 internal class DependencyContainer: DependencyContainerType {
@@ -15,10 +16,7 @@ internal class DependencyContainer: DependencyContainerType {
     var menuViewModel: MenuViewModelType {
         let viewModel = MenuViewModel()
         
-        viewModel.controllers = [
-            coffeeViewController(with: coffeeViewModel),
-            cafeViewController(with: cafeViewModel)
-            ]
+        viewModel.controllers = provideTabBarControllers()
         
         return viewModel
     }
@@ -48,5 +46,14 @@ internal class DependencyContainer: DependencyContainerType {
     
     var cafeViewModel: CafeViewModelType {
         CafeViewModel()
+    }
+}
+
+private extension DependencyContainer {
+    private func provideTabBarControllers() -> [UIViewController] {
+        return [
+            coffeeViewController(with: coffeeViewModel),
+            cafeViewController(with: cafeViewModel)
+            ]
     }
 }
