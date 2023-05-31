@@ -26,18 +26,11 @@ internal class MenuViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTabBar()
         insertTabBarControllers()
     }
 }
 
 private extension MenuViewController {
-    private func setTabBar() {
-//        UITabBar.appearance().barTintColor = UIColor.white
-//        tabBar.tintColor = UIColor.black
-//        tabBar.backgroundColor = UIColor.white
-    }
-    
     private func insertTabBarControllers() {
         guard let controllers = viewModel?.tabBarViewControllers() else {
             fatalError("Could not find tab bar view controllers in viewModel")

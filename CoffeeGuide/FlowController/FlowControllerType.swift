@@ -12,7 +12,7 @@ internal protocol FlowControllerType {
     var rootNavigationController: UINavigationController { get }
     
     func showMenuViewController()
-    func showCoffeeViewController()
+    func coffeeViewController() -> UIViewController
     func showCoffeeDetailsViewController(coffee: Coffee)
-    func showCafeViewController()
+    func cafeViewController() -> UIViewController
 }

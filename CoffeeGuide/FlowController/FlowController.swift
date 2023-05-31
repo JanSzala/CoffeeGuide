@@ -18,20 +18,35 @@ internal class FlowController: FlowControllerType {
         self.dependencyContainer = dependencyContainer
         self.rootNavigationController = rootNavigationController
         
+        navigationControllers()
         showMenuViewController()
     }
+    
+    let coffeeNavigationController = UINavigationController()
+    let cafeNavigationController = UINavigationController()
+    let addNavigationController = UINavigationController()
+    
+    
 }
 
 extension FlowController {
+    func navigationControllers() -> [UINavigationController] {
+        coffeeNavigationController.viewControllers = [coffeeViewController()]
+        cafeNavigationController.viewControllers = [coffeeViewController()]
+        
+        return [coffeeNavigationController, cafeNavigationController]
+    }
+    
     func showMenuViewController() {
         let viewModel = dependencyContainer.menuViewModel
+        viewModel.addControllers(navControllers: navigationControllers())
         
         let controller = dependencyContainer.menuViewController(with: viewModel)
         
         rootNavigationController.addChild(controller)
     }
     
-    func showCoffeeViewController() {
+    func coffeeViewController() -> UIViewController {
         var viewModel = dependencyContainer.coffeeViewModel
         
         viewModel.onCellTapped = { coffee in
@@ -40,7 +55,8 @@ extension FlowController {
         
         let controller = dependencyContainer.coffeeViewController(with: viewModel)
         
-        rootNavigationController.pushViewController(controller, animated: true)
+        
+        return controller
     }
     
     func showCoffeeDetailsViewController(coffee: Coffee) {
@@ -51,15 +67,11 @@ extension FlowController {
         rootNavigationController.pushViewController(controller, animated: true)
     }
     
-    func showCoffeeDetailsController() {
-        
-    }
-    
-    func showCafeViewController() {
+    func cafeViewController() -> UIViewController {
         let viewModel = dependencyContainer.cafeViewModel
         
         let controller = dependencyContainer.cafeViewController(with: viewModel)
         
-        rootNavigationController.pushViewController(controller, animated: true)
+        return controller
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 
 internal protocol MenuViewModelType {
-    var controllers: [UIViewController?] { get set }
+    var controllers: [UINavigationController] { get set }
     
-    func tabBarViewControllers() -> [UIViewController]
+    func addControllers(navControllers: [UINavigationController])
 }

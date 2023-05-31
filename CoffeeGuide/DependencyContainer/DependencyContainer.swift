@@ -14,11 +14,7 @@ internal class DependencyContainer: DependencyContainerType {
     }
     
     var menuViewModel: MenuViewModelType {
-        let viewModel = MenuViewModel()
-        
-        viewModel.controllers = provideTabBarControllers()
-        
-        return viewModel
+        MenuViewModel()
     }
     
     func coffeeViewController(with viewModel: CoffeeViewModelType) -> CoffeeViewController {
@@ -46,14 +42,5 @@ internal class DependencyContainer: DependencyContainerType {
     
     var cafeViewModel: CafeViewModelType {
         CafeViewModel()
-    }
-}
-
-private extension DependencyContainer {
-    private func provideTabBarControllers() -> [UIViewController] {
-        return [
-            coffeeViewController(with: coffeeViewModel),
-            cafeViewController(with: cafeViewModel)
-            ]
     }
 }
