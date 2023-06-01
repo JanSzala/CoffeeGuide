@@ -18,15 +18,12 @@ internal class FlowController: FlowControllerType {
         self.dependencyContainer = dependencyContainer
         self.rootNavigationController = rootNavigationController
         
-        navigationControllers()
         showMenuViewController()
     }
     
     let coffeeNavigationController = UINavigationController()
     let cafeNavigationController = UINavigationController()
     let addNavigationController = UINavigationController()
-    
-    
 }
 
 extension FlowController {
