@@ -29,7 +29,12 @@ internal class FlowController: FlowControllerType {
 extension FlowController {
     func navigationControllers() -> [UINavigationController] {
         coffeeNavigationController.viewControllers = [coffeeViewController()]
+        coffeeNavigationController.title = "Coffee"
+        coffeeNavigationController.navigationBar.isHidden = true
+        
         cafeNavigationController.viewControllers = [coffeeViewController()]
+        cafeNavigationController.title = "Cafe"
+        cafeNavigationController.navigationBar.isHidden = true
         
         return [coffeeNavigationController, cafeNavigationController]
     }

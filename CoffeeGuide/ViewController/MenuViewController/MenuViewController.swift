@@ -27,6 +27,8 @@ internal class MenuViewController: UITabBarController {
         super.viewDidLoad()
         
         insertTabBarControllers()
+        tabBar.barTintColor = UIColor.white
+        tabBar.isHidden = false
     }
 }
 
@@ -35,11 +37,6 @@ private extension MenuViewController {
         guard let controllers = viewModel?.controllers else {
             fatalError("Could not find tab bar view controllers in viewModel")
         }
-        
-        //Added for tests - please delete later
-        print("Controllers count: \(controllers.count)")
-        controllers[0].tabBarItem.title = "Coffee"
-        controllers[1].tabBarItem.title = "Cafe"
         
         viewControllers = controllers
     }
