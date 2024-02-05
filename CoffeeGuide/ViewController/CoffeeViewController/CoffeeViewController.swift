@@ -27,8 +27,8 @@ internal class CoffeeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setCollectionView()
-        setCollectionViewSource()
+//        setCollectionView()
+//        setCollectionViewSource()
     }
 }
 

@@ -27,8 +27,16 @@ internal class MenuViewController: UITabBarController {
         super.viewDidLoad()
         
         insertTabBarControllers()
-        tabBar.barTintColor = UIColor.white
-        tabBar.isHidden = false
+        setupTabBar()
+    }
+}
+
+private extension MenuViewController {
+    private func setupTabBar() {
+        self.tabBar.backgroundColor = .white
+        
+        let systemFontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18.0)]
+        UITabBarItem.appearance().setTitleTextAttributes(systemFontAttributes, for: .normal)
     }
 }
 

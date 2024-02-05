@@ -10,7 +10,9 @@ import UIKit
 
 internal class CafeViewController: UIViewController {
     var viewModel: CafeViewModelType?
-        
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+            
     // MARK: - Initializers
     
     init(viewModel: CafeViewModelType) {
@@ -26,7 +28,35 @@ internal class CafeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .red
-        print("Cafe view was loaded")
+        setupCollectionView()
+        collectionView.reloadData()
+    }
+    
+    private func setupCollectionView() {
+        collectionView.register(CafeCollectionViewCell.self, forCellWithReuseIdentifier: CafeCollectionViewCell.identifier)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 }
+
+extension CafeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 30
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CafeCollectionViewCell.identifier,
+                                                          for: indexPath)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+       return CGSize(width: 100.0, height: 100.0)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+}
+

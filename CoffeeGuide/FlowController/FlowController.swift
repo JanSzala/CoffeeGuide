@@ -32,11 +32,11 @@ extension FlowController {
         coffeeNavigationController.title = "Coffee"
         coffeeNavigationController.navigationBar.isHidden = true
         
-        cafeNavigationController.viewControllers = [coffeeViewController()]
+        cafeNavigationController.viewControllers = [cafeViewController()]
         cafeNavigationController.title = "Cafe"
         cafeNavigationController.navigationBar.isHidden = true
         
-        return [coffeeNavigationController, cafeNavigationController]
+        return [cafeNavigationController, coffeeNavigationController]
     }
     
     func showMenuViewController() {
