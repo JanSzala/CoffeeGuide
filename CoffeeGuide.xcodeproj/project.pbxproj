@@ -29,13 +29,13 @@
 		2270AD25292A1CB600DB5F14 /* CafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270AD24292A1CB600DB5F14 /* CafeViewController.swift */; };
 		2270AD27292A1CCF00DB5F14 /* CafeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270AD26292A1CCF00DB5F14 /* CafeViewModel.swift */; };
 		2270AD29292A1CD700DB5F14 /* CafeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270AD28292A1CD700DB5F14 /* CafeViewModelType.swift */; };
-		227A2D352B717EAE00E8E890 /* CafeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227A2D332B717EAE00E8E890 /* CafeCollectionViewCell.swift */; };
-		227A2D362B717EAE00E8E890 /* CafeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227A2D342B717EAE00E8E890 /* CafeCollectionViewCell.xib */; };
 		2285393E2B71399E001DC26F /* CoffeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2285393D2B71399E001DC26F /* CoffeeViewController.xib */; };
 		228539402B717914001DC26F /* CafeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2285393F2B717914001DC26F /* CafeViewController.xib */; };
 		22C0251028C7D84700974381 /* CoffeeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C0250F28C7D84700974381 /* CoffeeViewModelType.swift */; };
 		22C0251228C7D85400974381 /* CoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C0251128C7D85400974381 /* CoffeeViewModel.swift */; };
 		22C0251428C7D88300974381 /* CoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C0251328C7D88300974381 /* CoffeeViewController.swift */; };
+		22EBE4E62B72795D00413731 /* CafeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBE4E42B72795D00413731 /* CafeCollectionViewCell.swift */; };
+		22EBE4E72B72795D00413731 /* CafeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EBE4E52B72795D00413731 /* CafeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,13 +63,13 @@
 		2270AD24292A1CB600DB5F14 /* CafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeViewController.swift; sourceTree = "<group>"; };
 		2270AD26292A1CCF00DB5F14 /* CafeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeViewModel.swift; sourceTree = "<group>"; };
 		2270AD28292A1CD700DB5F14 /* CafeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeViewModelType.swift; sourceTree = "<group>"; };
-		227A2D332B717EAE00E8E890 /* CafeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeCollectionViewCell.swift; sourceTree = "<group>"; };
-		227A2D342B717EAE00E8E890 /* CafeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeCollectionViewCell.xib; sourceTree = "<group>"; };
 		2285393D2B71399E001DC26F /* CoffeeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeViewController.xib; sourceTree = "<group>"; };
 		2285393F2B717914001DC26F /* CafeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeViewController.xib; sourceTree = "<group>"; };
 		22C0250F28C7D84700974381 /* CoffeeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewModelType.swift; sourceTree = "<group>"; };
 		22C0251128C7D85400974381 /* CoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewModel.swift; sourceTree = "<group>"; };
 		22C0251328C7D88300974381 /* CoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewController.swift; sourceTree = "<group>"; };
+		22EBE4E42B72795D00413731 /* CafeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeCollectionViewCell.swift; sourceTree = "<group>"; };
+		22EBE4E52B72795D00413731 /* CafeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,8 +239,8 @@
 		227A2D372B717EC000E8E890 /* CafeCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				227A2D332B717EAE00E8E890 /* CafeCollectionViewCell.swift */,
-				227A2D342B717EAE00E8E890 /* CafeCollectionViewCell.xib */,
+				22EBE4E42B72795D00413731 /* CafeCollectionViewCell.swift */,
+				22EBE4E52B72795D00413731 /* CafeCollectionViewCell.xib */,
 			);
 			path = CafeCollectionViewCell;
 			sourceTree = "<group>";
@@ -326,7 +326,7 @@
 				228539402B717914001DC26F /* CafeViewController.xib in Resources */,
 				2285393E2B71399E001DC26F /* CoffeeViewController.xib in Resources */,
 				223F25CC289BEE010010D51C /* Assets.xcassets in Resources */,
-				227A2D362B717EAE00E8E890 /* CafeCollectionViewCell.xib in Resources */,
+				22EBE4E72B72795D00413731 /* CafeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +339,7 @@
 			files = (
 				2270AD25292A1CB600DB5F14 /* CafeViewController.swift in Sources */,
 				22525D2228A15FFC00B061D7 /* FlowControllerType.swift in Sources */,
+				22EBE4E62B72795D00413731 /* CafeCollectionViewCell.swift in Sources */,
 				2231BD1829A6495300B82859 /* CoffeePropertiesCell.swift in Sources */,
 				2231BD1329A60F4A00B82859 /* CoffeeDetailsImageCell.swift in Sources */,
 				22525D1B28A1582D00B061D7 /* MenuViewModel.swift in Sources */,
@@ -350,7 +351,6 @@
 				22525D1828A157F600B061D7 /* MenuViewController.swift in Sources */,
 				22C0251228C7D85400974381 /* CoffeeViewModel.swift in Sources */,
 				223F25C3289BEE000010D51C /* AppDelegate.swift in Sources */,
-				227A2D352B717EAE00E8E890 /* CafeCollectionViewCell.swift in Sources */,
 				222FD905299E609B0070E4A3 /* CoffeeDetailsViewModel.swift in Sources */,
 				222FD902299E60810070E4A3 /* CoffeeDetailsViewController.swift in Sources */,
 				22525D1428A1559700B061D7 /* DependencyContainerType.swift in Sources */,
