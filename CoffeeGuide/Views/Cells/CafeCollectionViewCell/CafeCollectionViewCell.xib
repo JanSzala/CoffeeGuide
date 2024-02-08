@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CafeCollectionViewCell" customModule="CoffeeGuide" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CafeCollectionViewCell" id="gTV-IL-0wX" customClass="CafeCollectionViewCell" customModule="CoffeeGuide" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CafeCollectionViewCell" id="gTV-IL-0wX">
             <rect key="frame" x="0.0" y="0.0" width="204" height="204"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -36,6 +36,7 @@
                         <constraints>
                             <constraint firstItem="Dgu-Qk-2ea" firstAttribute="leading" secondItem="hro-nQ-0l5" secondAttribute="leading" constant="8" id="0tQ-VT-w0t"/>
                             <constraint firstItem="kgC-er-Ud6" firstAttribute="leading" secondItem="hro-nQ-0l5" secondAttribute="leading" constant="9" id="SDL-hl-vKP"/>
+                            <constraint firstAttribute="width" secondItem="hro-nQ-0l5" secondAttribute="height" multiplier="1:1" id="akD-PM-cAQ"/>
                             <constraint firstAttribute="trailing" secondItem="Dgu-Qk-2ea" secondAttribute="trailing" constant="8" id="bda-OL-urB"/>
                             <constraint firstItem="kgC-er-Ud6" firstAttribute="top" secondItem="Dgu-Qk-2ea" secondAttribute="bottom" constant="10" id="fQ6-zt-Pzi"/>
                             <constraint firstAttribute="bottom" secondItem="kgC-er-Ud6" secondAttribute="bottom" constant="10" id="fd1-Zg-Byc"/>

@@ -39,6 +39,7 @@ extension CoffeeViewController {
     }
     
     private func setCollectionView() {
+        /*
         let collectionContainerView = UIView()
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -61,6 +62,7 @@ extension CoffeeViewController {
         collectionContainerView.addSubview(collectionView)
         
         self.view = collectionContainerView
+         */
     }
 }
 

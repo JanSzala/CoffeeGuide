@@ -35,7 +35,7 @@ internal class CafeViewController: UIViewController {
     
     private func setupCollectionView() {
         let cafeCellNib = UINib(nibName: "CafeCollectionViewCell", bundle: nil)
-        collectionView.register(cafeCellNib, forCellWithReuseIdentifier: "CafeCollectionViewCell")
+        collectionView.register(cafeCellNib, forCellWithReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell")
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -56,18 +56,15 @@ extension CafeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CafeCollectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell", for: indexPath)
         
         return cell
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
-//        let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0) + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
-//        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
-//        return CGSize(width: size, height: size)
-        
-        return CGSize(width: 180, height: 180)
+        let spacing = 28.0
+        let cellSide: CGFloat = (collectionView.frame.size.width - spacing) / 2.0
+        return CGSize(width: cellSide, height: cellSide)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

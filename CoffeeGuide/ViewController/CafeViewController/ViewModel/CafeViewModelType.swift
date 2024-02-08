@@ -8,4 +8,5 @@
 import Foundation
 
 internal protocol CafeViewModelType {
+    var cafeCellIdentifier : String { get }
 }
