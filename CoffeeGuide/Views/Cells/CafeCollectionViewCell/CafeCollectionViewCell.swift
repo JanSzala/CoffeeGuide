@@ -8,10 +8,10 @@
 import UIKit
 
 class CafeCollectionViewCell: UICollectionViewCell {
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        print("Cell")
+        print("test")
     }
 }

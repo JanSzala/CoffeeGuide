@@ -30,12 +30,11 @@ internal class CafeViewController: UIViewController {
         
         setupCollectionView()
         setupCollectionViewFlowLayout()
-        collectionView.reloadData()
     }
-    
+        
     private func setupCollectionView() {
         let cafeCellNib = UINib(nibName: "CafeCollectionViewCell", bundle: nil)
-        collectionView.register(cafeCellNib, forCellWithReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell")
+        self.collectionView.register(cafeCellNib, forCellWithReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell")
         
         collectionView.delegate = self
         collectionView.dataSource = self
