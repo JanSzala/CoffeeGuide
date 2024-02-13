@@ -8,6 +8,6 @@
 import Foundation
 
 internal class CafeViewModel: CafeViewModelType {
-    let cafeCellIdentifier = "cafeCollectionViewCell"
+    let cafeCellIdentifier = "CafeCollectionViewCell"
     
 }

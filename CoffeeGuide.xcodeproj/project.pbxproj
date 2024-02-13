@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22171C452B7BB47B007195BF /* CoffeeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22171C432B7BB47B007195BF /* CoffeeCollectionViewCell.swift */; };
+		22171C462B7BB47B007195BF /* CoffeeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22171C442B7BB47B007195BF /* CoffeeCollectionViewCell.xib */; };
+		22171C492B7BB6FE007195BF /* CafeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22171C472B7BB6FE007195BF /* CafeCollectionViewCell.swift */; };
+		22171C4A2B7BB6FE007195BF /* CafeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22171C482B7BB6FE007195BF /* CafeCollectionViewCell.xib */; };
 		222FD902299E60810070E4A3 /* CoffeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FD901299E60810070E4A3 /* CoffeeDetailsViewController.swift */; };
 		222FD905299E609B0070E4A3 /* CoffeeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FD904299E609B0070E4A3 /* CoffeeDetailsViewModel.swift */; };
 		222FD907299E60AC0070E4A3 /* CoffeeDetailsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FD906299E60AC0070E4A3 /* CoffeeDetailsViewModelType.swift */; };
@@ -30,11 +34,13 @@
 		22C0251028C7D84700974381 /* CoffeeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C0250F28C7D84700974381 /* CoffeeViewModelType.swift */; };
 		22C0251228C7D85400974381 /* CoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C0251128C7D85400974381 /* CoffeeViewModel.swift */; };
 		22C0251428C7D88300974381 /* CoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C0251328C7D88300974381 /* CoffeeViewController.swift */; };
-		22EBE4E62B72795D00413731 /* CafeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBE4E42B72795D00413731 /* CafeCollectionViewCell.swift */; };
-		22EBE4E72B72795D00413731 /* CafeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EBE4E52B72795D00413731 /* CafeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22171C432B7BB47B007195BF /* CoffeeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCollectionViewCell.swift; sourceTree = "<group>"; };
+		22171C442B7BB47B007195BF /* CoffeeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeCollectionViewCell.xib; sourceTree = "<group>"; };
+		22171C472B7BB6FE007195BF /* CafeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeCollectionViewCell.swift; sourceTree = "<group>"; };
+		22171C482B7BB6FE007195BF /* CafeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeCollectionViewCell.xib; sourceTree = "<group>"; };
 		222FD901299E60810070E4A3 /* CoffeeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailsViewController.swift; sourceTree = "<group>"; };
 		222FD904299E609B0070E4A3 /* CoffeeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailsViewModel.swift; sourceTree = "<group>"; };
 		222FD906299E60AC0070E4A3 /* CoffeeDetailsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailsViewModelType.swift; sourceTree = "<group>"; };
@@ -60,8 +66,6 @@
 		22C0250F28C7D84700974381 /* CoffeeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewModelType.swift; sourceTree = "<group>"; };
 		22C0251128C7D85400974381 /* CoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewModel.swift; sourceTree = "<group>"; };
 		22C0251328C7D88300974381 /* CoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewController.swift; sourceTree = "<group>"; };
-		22EBE4E42B72795D00413731 /* CafeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeCollectionViewCell.swift; sourceTree = "<group>"; };
-		22EBE4E52B72795D00413731 /* CafeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22171C422B7BB45E007195BF /* CoffeeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				22171C432B7BB47B007195BF /* CoffeeCollectionViewCell.swift */,
+				22171C442B7BB47B007195BF /* CoffeeCollectionViewCell.xib */,
+			);
+			path = CoffeeCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		222FD900299E60660070E4A3 /* CoffeeDetailsControler */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +125,7 @@
 		222FD90C299F7F2F0070E4A3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				22171C422B7BB45E007195BF /* CoffeeCollectionViewCell */,
 				227A2D372B717EC000E8E890 /* CafeCollectionViewCell */,
 			);
 			path = Cells;
@@ -219,8 +233,8 @@
 		227A2D372B717EC000E8E890 /* CafeCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				22EBE4E42B72795D00413731 /* CafeCollectionViewCell.swift */,
-				22EBE4E52B72795D00413731 /* CafeCollectionViewCell.xib */,
+				22171C472B7BB6FE007195BF /* CafeCollectionViewCell.swift */,
+				22171C482B7BB6FE007195BF /* CafeCollectionViewCell.xib */,
 			);
 			path = CafeCollectionViewCell;
 			sourceTree = "<group>";
@@ -302,11 +316,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22171C462B7BB47B007195BF /* CoffeeCollectionViewCell.xib in Resources */,
 				223F25CF289BEE010010D51C /* LaunchScreen.storyboard in Resources */,
 				228539402B717914001DC26F /* CafeViewController.xib in Resources */,
+				22171C4A2B7BB6FE007195BF /* CafeCollectionViewCell.xib in Resources */,
 				2285393E2B71399E001DC26F /* CoffeeViewController.xib in Resources */,
 				223F25CC289BEE010010D51C /* Assets.xcassets in Resources */,
-				22EBE4E72B72795D00413731 /* CafeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,11 +334,11 @@
 			files = (
 				2270AD25292A1CB600DB5F14 /* CafeViewController.swift in Sources */,
 				22525D2228A15FFC00B061D7 /* FlowControllerType.swift in Sources */,
-				22EBE4E62B72795D00413731 /* CafeCollectionViewCell.swift in Sources */,
 				22525D1B28A1582D00B061D7 /* MenuViewModel.swift in Sources */,
 				22C0251028C7D84700974381 /* CoffeeViewModelType.swift in Sources */,
 				2270AD29292A1CD700DB5F14 /* CafeViewModelType.swift in Sources */,
 				22525D2028A15FF100B061D7 /* FlowController.swift in Sources */,
+				22171C452B7BB47B007195BF /* CoffeeCollectionViewCell.swift in Sources */,
 				2270AD27292A1CCF00DB5F14 /* CafeViewModel.swift in Sources */,
 				22C0251428C7D88300974381 /* CoffeeViewController.swift in Sources */,
 				22525D1828A157F600B061D7 /* MenuViewController.swift in Sources */,
@@ -333,6 +348,7 @@
 				222FD902299E60810070E4A3 /* CoffeeDetailsViewController.swift in Sources */,
 				22525D1428A1559700B061D7 /* DependencyContainerType.swift in Sources */,
 				222FD90A299F789E0070E4A3 /* Coffee.swift in Sources */,
+				22171C492B7BB6FE007195BF /* CafeCollectionViewCell.swift in Sources */,
 				22525D1D28A1583600B061D7 /* MenuViewModelType.swift in Sources */,
 				22525D1228A1558A00B061D7 /* DependencyContainer.swift in Sources */,
 				222FD907299E60AC0070E4A3 /* CoffeeDetailsViewModelType.swift in Sources */,

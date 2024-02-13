@@ -31,13 +31,19 @@ internal class CafeViewController: UIViewController {
         setupCollectionView()
         setupCollectionViewFlowLayout()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        collectionView.reloadData()
+    }
         
     private func setupCollectionView() {
-        let cafeCellNib = UINib(nibName: "CafeCollectionViewCell", bundle: nil)
-        self.collectionView.register(cafeCellNib, forCellWithReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell")
-        
-        collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        let cafeCellNib = UINib.init(nibName: "CafeCollectionViewCell", bundle: nil)
+        collectionView.register(cafeCellNib, forCellWithReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell")
     }
     
     private func setupCollectionViewFlowLayout() {
@@ -69,9 +75,5 @@ extension CafeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
            return UIEdgeInsets(top: 2, left: 10, bottom: 0, right: 10)
         }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
 }
 
