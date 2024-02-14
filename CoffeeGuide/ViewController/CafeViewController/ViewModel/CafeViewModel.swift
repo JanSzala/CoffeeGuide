@@ -9,5 +9,4 @@ import Foundation
 
 internal class CafeViewModel: CafeViewModelType {
     let cafeCellIdentifier = "CafeCollectionViewCell"
-    
 }

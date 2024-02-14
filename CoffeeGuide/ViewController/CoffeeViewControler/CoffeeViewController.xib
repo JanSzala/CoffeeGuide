@@ -11,18 +11,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoffeeViewController" customModule="CoffeeGuide" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="UwI-KR-Onr"/>
+                <outlet property="collectionView" destination="ILA-Kf-aDF" id="DyI-wp-N0T"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="iWQ-F9-Kzb">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ILA-Kf-aDF">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4OX-3r-YSu">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ML4-Xi-6it">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -30,23 +31,20 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemGreenColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="iWQ-F9-Kzb" secondAttribute="trailing" id="ADd-0d-189"/>
-                <constraint firstAttribute="bottom" secondItem="iWQ-F9-Kzb" secondAttribute="bottom" id="DcS-kT-2cc"/>
-                <constraint firstItem="iWQ-F9-Kzb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Lxn-f1-xfI"/>
-                <constraint firstItem="iWQ-F9-Kzb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dwc-PD-306"/>
+                <constraint firstAttribute="bottom" secondItem="ILA-Kf-aDF" secondAttribute="bottom" id="ZxP-io-JSs"/>
+                <constraint firstAttribute="trailing" secondItem="ILA-Kf-aDF" secondAttribute="trailing" id="b1u-Wv-Zvw"/>
+                <constraint firstItem="ILA-Kf-aDF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mZe-V0-umV"/>
+                <constraint firstItem="ILA-Kf-aDF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sS7-Pg-TwN"/>
             </constraints>
-            <point key="canvasLocation" x="35.877862595419849" y="19.718309859154932"/>
+            <point key="canvasLocation" x="101.5267175572519" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

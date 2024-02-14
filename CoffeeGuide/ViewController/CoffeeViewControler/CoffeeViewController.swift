@@ -1,21 +1,21 @@
 //
-//  CafeViewController.swift
+//  CoffeeViewController.swift
 //  CoffeeGuide
 //
-//  Created by GLaDOS on 20/11/2022.
+//  Created by GLaDOS on 14/02/2024.
 //
 
 import Foundation
 import UIKit
 
-internal class CafeViewController: UIViewController {
+class CoffeeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var viewModel: CafeViewModelType?
-            
+    var viewModel: CoffeeViewModelType?
+    
     // MARK: - Initializers
     
-    init(viewModel: CafeViewModelType) {
+    init(viewModel: CoffeeViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -36,7 +36,7 @@ internal class CafeViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        let cafeCellNib = UINib.init(nibName: "CafeCollectionViewCell", bundle: nil)
+        let cafeCellNib = UINib.init(nibName: "CoffeeCollectionViewCell", bundle: nil)
         collectionView.register(cafeCellNib, forCellWithReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell")
     }
     
@@ -49,7 +49,7 @@ internal class CafeViewController: UIViewController {
     }
 }
 
-extension CafeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension CoffeeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 50
     }
@@ -62,7 +62,7 @@ extension CafeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let spacing = 28.0
-        let cellSide: CGFloat = (collectionView.frame.size.width - spacing)
+        let cellSide: CGFloat = (collectionView.frame.size.width - spacing) / 2.0
         return CGSize(width: cellSide, height: cellSide)
     }
     

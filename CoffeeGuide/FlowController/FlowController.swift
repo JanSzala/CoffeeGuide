@@ -36,7 +36,7 @@ extension FlowController {
         cafeNavigationController.title = "Cafe"
         cafeNavigationController.navigationBar.isHidden = true
         
-        return [cafeNavigationController, coffeeNavigationController]
+        return [coffeeNavigationController, cafeNavigationController]
     }
     
     func showMenuViewController() {
@@ -51,9 +51,9 @@ extension FlowController {
     func coffeeViewController() -> UIViewController {
         var viewModel = dependencyContainer.coffeeViewModel
         
-        viewModel.onCellTapped = { coffee in
-            self.showCoffeeDetailsViewController(coffee: coffee)
-        }
+//        viewModel.onCellTapped = { coffee in
+//            self.showCoffeeDetailsViewController(coffee: coffee)
+//        }
         
         let controller = dependencyContainer.coffeeViewController(with: viewModel)
         
@@ -61,13 +61,13 @@ extension FlowController {
         return controller
     }
     
-    func showCoffeeDetailsViewController(coffee: Coffee) {
-        let viewModel = dependencyContainer.coffeeDetailsViewModel
-        
-        let controller = dependencyContainer.coffeeDetailsViewController(with: viewModel, coffee: coffee)
-        
-        rootNavigationController.pushViewController(controller, animated: true)
-    }
+//    func showCoffeeDetailsViewController(coffee: Coffee) {
+//        let viewModel = dependencyContainer.coffeeDetailsViewModel
+//        
+//        let controller = dependencyContainer.coffeeDetailsViewController(with: viewModel, coffee: coffee)
+//        
+//        rootNavigationController.pushViewController(controller, animated: true)
+//    }
     
     func cafeViewController() -> UIViewController {
         let viewModel = dependencyContainer.cafeViewModel

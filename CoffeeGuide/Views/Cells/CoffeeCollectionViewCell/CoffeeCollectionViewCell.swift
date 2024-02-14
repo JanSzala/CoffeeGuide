@@ -8,12 +8,19 @@
 import UIKit
 
 class CoffeeCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var coffeeBackgroundView: UIView!
     @IBOutlet weak var coffeeLabel: UILabel!
+    @IBOutlet weak var coffeeImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        coffeeLabel.text = "Dupa"
+        
+        setupCell()
     }
+}
 
+fileprivate extension CoffeeCollectionViewCell {
+    func setupCell() {
+        coffeeBackgroundView.layer.cornerRadius = 20.0
+    }
 }
