@@ -8,5 +8,11 @@
 import Foundation
 
 internal class CoffeeViewModel: CoffeeViewModelType {
+    var didSelectCell: ((Int) -> ())?
+    
     let cafeCellIdentifier = "CoffeeCollectionViewCell"
+    
+    func didSelectCell(at index: Int) {
+        didSelectCell?(index)
+    }
 }

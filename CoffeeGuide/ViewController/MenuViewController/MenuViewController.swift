@@ -32,20 +32,18 @@ internal class MenuViewController: UITabBarController {
 }
 
 private extension MenuViewController {
-    private func setupTabBar() {
-        self.tabBar.backgroundColor = .white
-        
-        let systemFontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18.0)]
-        UITabBarItem.appearance().setTitleTextAttributes(systemFontAttributes, for: .normal)
-    }
-}
-
-private extension MenuViewController {
     private func insertTabBarControllers() {
         guard let controllers = viewModel?.controllers else {
             fatalError("Could not find tab bar view controllers in viewModel")
         }
         
         viewControllers = controllers
+    }
+    
+    private func setupTabBar() {
+        self.tabBar.backgroundColor = .white
+        
+        let systemFontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18.0)]
+        UITabBarItem.appearance().setTitleTextAttributes(systemFontAttributes, for: .normal)
     }
 }

@@ -66,7 +66,11 @@ extension CoffeeViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return CGSize(width: cellSide, height: cellSide)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel?.didSelectCell?(indexPath.row)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
            return UIEdgeInsets(top: 2, left: 10, bottom: 0, right: 10)
-        }
+    }
 }

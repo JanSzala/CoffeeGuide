@@ -51,9 +51,9 @@ extension FlowController {
     func coffeeViewController() -> UIViewController {
         var viewModel = dependencyContainer.coffeeViewModel
         
-//        viewModel.onCellTapped = { coffee in
-//            self.showCoffeeDetailsViewController(coffee: coffee)
-//        }
+        viewModel.didSelectCell = { coffeeIndex in
+            print("didSelect coffee cell at:" + String(coffeeIndex))
+        }
         
         let controller = dependencyContainer.coffeeViewController(with: viewModel)
         
