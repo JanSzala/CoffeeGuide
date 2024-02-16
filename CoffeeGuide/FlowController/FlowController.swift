@@ -53,6 +53,7 @@ extension FlowController {
         
         viewModel.didSelectCell = { coffeeIndex in
             print("didSelect coffee cell at:" + String(coffeeIndex))
+            self.showCoffeeDetailsViewController()
         }
         
         let controller = dependencyContainer.coffeeViewController(with: viewModel)
@@ -61,13 +62,13 @@ extension FlowController {
         return controller
     }
     
-//    func showCoffeeDetailsViewController(coffee: Coffee) {
-//        let viewModel = dependencyContainer.coffeeDetailsViewModel
-//        
-//        let controller = dependencyContainer.coffeeDetailsViewController(with: viewModel, coffee: coffee)
-//        
-//        rootNavigationController.pushViewController(controller, animated: true)
-//    }
+    func showCoffeeDetailsViewController() {
+        let viewModel = dependencyContainer.coffeeDetailsViewModel
+        
+        let controller = dependencyContainer.coffeeDetailsViewController(with: viewModel)
+        
+        rootNavigationController.pushViewController(controller, animated: true)
+    }
     
     func cafeViewController() -> UIViewController {
         let viewModel = dependencyContainer.cafeViewModel

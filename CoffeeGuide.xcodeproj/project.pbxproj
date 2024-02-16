@@ -31,6 +31,10 @@
 		2270AD27292A1CCF00DB5F14 /* CafeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270AD26292A1CCF00DB5F14 /* CafeViewModel.swift */; };
 		2270AD29292A1CD700DB5F14 /* CafeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270AD28292A1CD700DB5F14 /* CafeViewModelType.swift */; };
 		228539402B717914001DC26F /* CafeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2285393F2B717914001DC26F /* CafeViewController.xib */; };
+		22CB60312B7FABC50000AE74 /* CoffeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CB602F2B7FABC50000AE74 /* CoffeeDetailsViewController.swift */; };
+		22CB60322B7FABC50000AE74 /* CoffeeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22CB60302B7FABC50000AE74 /* CoffeeDetailsViewController.xib */; };
+		22CB60352B7FABEA0000AE74 /* CoffeeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CB60342B7FABEA0000AE74 /* CoffeeDetailsViewModel.swift */; };
+		22CB60372B7FABFA0000AE74 /* CoffeeDetailsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CB60362B7FABFA0000AE74 /* CoffeeDetailsViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,10 @@
 		2270AD26292A1CCF00DB5F14 /* CafeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeViewModel.swift; sourceTree = "<group>"; };
 		2270AD28292A1CD700DB5F14 /* CafeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeViewModelType.swift; sourceTree = "<group>"; };
 		2285393F2B717914001DC26F /* CafeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeViewController.xib; sourceTree = "<group>"; };
+		22CB602F2B7FABC50000AE74 /* CoffeeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailsViewController.swift; sourceTree = "<group>"; };
+		22CB60302B7FABC50000AE74 /* CoffeeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeDetailsViewController.xib; sourceTree = "<group>"; };
+		22CB60342B7FABEA0000AE74 /* CoffeeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailsViewModel.swift; sourceTree = "<group>"; };
+		22CB60362B7FABFA0000AE74 /* CoffeeDetailsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailsViewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +179,7 @@
 		22525D1528A157E000B061D7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				22CB602E2B7FAB9B0000AE74 /* CoffeeDetailsViewController */,
 				222FD900299E60660070E4A3 /* CoffeeViewControler */,
 				2270AD22292A1C8C00DB5F14 /* CafeViewController */,
 				22525D1628A157E700B061D7 /* MenuViewController */,
@@ -233,6 +242,25 @@
 			path = CafeCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		22CB602E2B7FAB9B0000AE74 /* CoffeeDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22CB60332B7FABCF0000AE74 /* ViewModel */,
+				22CB602F2B7FABC50000AE74 /* CoffeeDetailsViewController.swift */,
+				22CB60302B7FABC50000AE74 /* CoffeeDetailsViewController.xib */,
+			);
+			path = CoffeeDetailsViewController;
+			sourceTree = "<group>";
+		};
+		22CB60332B7FABCF0000AE74 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22CB60362B7FABFA0000AE74 /* CoffeeDetailsViewModelType.swift */,
+				22CB60342B7FABEA0000AE74 /* CoffeeDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22171C462B7BB47B007195BF /* CoffeeCollectionViewCell.xib in Resources */,
+				22CB60322B7FABC50000AE74 /* CoffeeDetailsViewController.xib in Resources */,
 				22171C4E2B7D0BCB007195BF /* CoffeeViewController.xib in Resources */,
 				223F25CF289BEE010010D51C /* LaunchScreen.storyboard in Resources */,
 				228539402B717914001DC26F /* CafeViewController.xib in Resources */,
@@ -321,10 +350,13 @@
 				222FD90A299F789E0070E4A3 /* Coffee.swift in Sources */,
 				22171C4D2B7D0BCB007195BF /* CoffeeViewController.swift in Sources */,
 				22171C492B7BB6FE007195BF /* CafeCollectionViewCell.swift in Sources */,
+				22CB60372B7FABFA0000AE74 /* CoffeeDetailsViewModelType.swift in Sources */,
 				22525D1D28A1583600B061D7 /* MenuViewModelType.swift in Sources */,
+				22CB60352B7FABEA0000AE74 /* CoffeeDetailsViewModel.swift in Sources */,
 				22525D1228A1558A00B061D7 /* DependencyContainer.swift in Sources */,
 				222FD907299E60AC0070E4A3 /* CoffeeViewModelType.swift in Sources */,
 				223F25C5289BEE000010D51C /* SceneDelegate.swift in Sources */,
+				22CB60312B7FABC50000AE74 /* CoffeeDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
