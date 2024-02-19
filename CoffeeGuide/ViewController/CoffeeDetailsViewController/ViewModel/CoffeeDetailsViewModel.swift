@@ -8,4 +8,5 @@
 import Foundation
 
 internal class CoffeeDetailsViewModel: CoffeeDetailsViewModelType {
+    var didSelectBack: (() -> ())?
 }

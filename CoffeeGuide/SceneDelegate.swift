@@ -24,7 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let navigationController = rootNavigationController
         navigationController.navigationBar.isHidden = false
-//        navigationController.navigationBar.backgroundColor = .white
+        navigationController.navigationBar.backgroundColor = .white
+        navigationController.view.tintColor = .black
         
         let dependencyContainer = DependencyContainer()
         

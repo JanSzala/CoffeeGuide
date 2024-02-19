@@ -12,7 +12,4 @@ internal class CoffeeViewModel: CoffeeViewModelType {
     
     let cafeCellIdentifier = "CoffeeCollectionViewCell"
     
-    func didSelectCell(at index: Int) {
-        didSelectCell?(index)
-    }
 }

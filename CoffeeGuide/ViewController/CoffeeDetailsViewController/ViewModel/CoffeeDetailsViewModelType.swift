@@ -8,4 +8,5 @@
 import Foundation
 
 internal protocol CoffeeDetailsViewModelType {
+    var didSelectBack: (() -> ())? { get set }
 }

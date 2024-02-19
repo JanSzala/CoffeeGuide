@@ -23,7 +23,6 @@ internal class FlowController: FlowControllerType {
     
     let coffeeNavigationController = UINavigationController()
     let cafeNavigationController = UINavigationController()
-    let addNavigationController = UINavigationController()
 }
 
 extension FlowController {
@@ -63,9 +62,13 @@ extension FlowController {
     }
     
     func showCoffeeDetailsViewController() {
-        let viewModel = dependencyContainer.coffeeDetailsViewModel
+        var viewModel = dependencyContainer.coffeeDetailsViewModel
         
         let controller = dependencyContainer.coffeeDetailsViewController(with: viewModel)
+        
+        viewModel.didSelectBack = {
+            self.rootNavigationController.popViewController(animated: true)
+        }
         
         rootNavigationController.pushViewController(controller, animated: true)
     }

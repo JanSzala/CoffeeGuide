@@ -26,9 +26,20 @@ class CoffeeDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUpNavBar()
+    }
+}
+
+private extension CoffeeDetailsViewController {
+    private func setUpNavBar() {
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationItem.title = "Coffee Details"
+
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(didSelectBackButton))
+        navigationItem.leftBarButtonItem = backButton
     }
     
-    private func setupBackButton() {
-        self.navigationController?.navigationBar.backItem?.title = "Back"
+    @objc func didSelectBackButton() {
+        viewModel?.didSelectBack?()
     }
 }

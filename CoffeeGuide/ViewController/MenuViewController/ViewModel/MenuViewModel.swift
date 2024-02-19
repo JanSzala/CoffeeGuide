@@ -8,9 +8,10 @@
 import UIKit
 import Foundation
 
-internal class MenuViewModel: MenuViewModelType {
+internal class MenuViewModel: MenuViewModelType {    
     var controllers: [UINavigationController] = []
     
+
     func addControllers(navControllers: [UINavigationController]) {
         controllers = navControllers
     }
