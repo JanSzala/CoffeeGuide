@@ -35,6 +35,10 @@
 		22CB60322B7FABC50000AE74 /* CoffeeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22CB60302B7FABC50000AE74 /* CoffeeDetailsViewController.xib */; };
 		22CB60352B7FABEA0000AE74 /* CoffeeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CB60342B7FABEA0000AE74 /* CoffeeDetailsViewModel.swift */; };
 		22CB60372B7FABFA0000AE74 /* CoffeeDetailsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CB60362B7FABFA0000AE74 /* CoffeeDetailsViewModelType.swift */; };
+		22E278002B855495005AF2D1 /* CafeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E277FE2B855495005AF2D1 /* CafeDetailsViewController.swift */; };
+		22E278012B855495005AF2D1 /* CafeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E277FF2B855495005AF2D1 /* CafeDetailsViewController.xib */; };
+		22E278032B8554AA005AF2D1 /* CafeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E278022B8554AA005AF2D1 /* CafeDetailsViewModel.swift */; };
+		22E278052B8554B4005AF2D1 /* CafeDetailsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E278042B8554B4005AF2D1 /* CafeDetailsViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +72,10 @@
 		22CB60302B7FABC50000AE74 /* CoffeeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeDetailsViewController.xib; sourceTree = "<group>"; };
 		22CB60342B7FABEA0000AE74 /* CoffeeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailsViewModel.swift; sourceTree = "<group>"; };
 		22CB60362B7FABFA0000AE74 /* CoffeeDetailsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailsViewModelType.swift; sourceTree = "<group>"; };
+		22E277FE2B855495005AF2D1 /* CafeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailsViewController.swift; sourceTree = "<group>"; };
+		22E277FF2B855495005AF2D1 /* CafeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeDetailsViewController.xib; sourceTree = "<group>"; };
+		22E278022B8554AA005AF2D1 /* CafeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailsViewModel.swift; sourceTree = "<group>"; };
+		22E278042B8554B4005AF2D1 /* CafeDetailsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailsViewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +187,7 @@
 		22525D1528A157E000B061D7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				22E277FC2B855466005AF2D1 /* CafeDetailsViewController */,
 				22CB602E2B7FAB9B0000AE74 /* CoffeeDetailsViewController */,
 				222FD900299E60660070E4A3 /* CoffeeViewControler */,
 				2270AD22292A1C8C00DB5F14 /* CafeViewController */,
@@ -261,6 +270,25 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		22E277FC2B855466005AF2D1 /* CafeDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22E277FD2B855478005AF2D1 /* CafeDetailsViewModel */,
+				22E277FE2B855495005AF2D1 /* CafeDetailsViewController.swift */,
+				22E277FF2B855495005AF2D1 /* CafeDetailsViewController.xib */,
+			);
+			path = CafeDetailsViewController;
+			sourceTree = "<group>";
+		};
+		22E277FD2B855478005AF2D1 /* CafeDetailsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22E278042B8554B4005AF2D1 /* CafeDetailsViewModelType.swift */,
+				22E278022B8554AA005AF2D1 /* CafeDetailsViewModel.swift */,
+			);
+			path = CafeDetailsViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -321,6 +349,7 @@
 			files = (
 				22171C462B7BB47B007195BF /* CoffeeCollectionViewCell.xib in Resources */,
 				22CB60322B7FABC50000AE74 /* CoffeeDetailsViewController.xib in Resources */,
+				22E278012B855495005AF2D1 /* CafeDetailsViewController.xib in Resources */,
 				22171C4E2B7D0BCB007195BF /* CoffeeViewController.xib in Resources */,
 				223F25CF289BEE010010D51C /* LaunchScreen.storyboard in Resources */,
 				228539402B717914001DC26F /* CafeViewController.xib in Resources */,
@@ -340,7 +369,9 @@
 				22525D2228A15FFC00B061D7 /* FlowControllerType.swift in Sources */,
 				22525D1B28A1582D00B061D7 /* MenuViewModel.swift in Sources */,
 				2270AD29292A1CD700DB5F14 /* CafeViewModelType.swift in Sources */,
+				22E278002B855495005AF2D1 /* CafeDetailsViewController.swift in Sources */,
 				22525D2028A15FF100B061D7 /* FlowController.swift in Sources */,
+				22E278032B8554AA005AF2D1 /* CafeDetailsViewModel.swift in Sources */,
 				22171C452B7BB47B007195BF /* CoffeeCollectionViewCell.swift in Sources */,
 				2270AD27292A1CCF00DB5F14 /* CafeViewModel.swift in Sources */,
 				22525D1828A157F600B061D7 /* MenuViewController.swift in Sources */,
@@ -354,6 +385,7 @@
 				22525D1D28A1583600B061D7 /* MenuViewModelType.swift in Sources */,
 				22CB60352B7FABEA0000AE74 /* CoffeeDetailsViewModel.swift in Sources */,
 				22525D1228A1558A00B061D7 /* DependencyContainer.swift in Sources */,
+				22E278052B8554B4005AF2D1 /* CafeDetailsViewModelType.swift in Sources */,
 				222FD907299E60AC0070E4A3 /* CoffeeViewModelType.swift in Sources */,
 				223F25C5289BEE000010D51C /* SceneDelegate.swift in Sources */,
 				22CB60312B7FABC50000AE74 /* CoffeeDetailsViewController.swift in Sources */,
@@ -502,7 +534,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -535,7 +567,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

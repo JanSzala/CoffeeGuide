@@ -19,4 +19,7 @@ internal protocol DependencyContainerType {
         
     func cafeViewController(with viewModel: CafeViewModelType) -> CafeViewController
     var cafeViewModel: CafeViewModelType { get }
+    
+    func cafeDetailsViewController(with viewModel: CafeDetailsViewModelType) -> CafeDetailsViewController
+    var cafeDetailsViewModel: CafeDetailsViewModelType { get }
 }

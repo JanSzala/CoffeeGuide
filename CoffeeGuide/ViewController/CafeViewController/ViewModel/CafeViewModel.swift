@@ -8,5 +8,7 @@
 import Foundation
 
 internal class CafeViewModel: CafeViewModelType {
+    var didSelectCell: ((Int) -> ())?
+    
     let cafeCellIdentifier = "CafeCollectionViewCell"
 }

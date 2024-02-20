@@ -74,10 +74,27 @@ extension FlowController {
     }
     
     func cafeViewController() -> UIViewController {
-        let viewModel = dependencyContainer.cafeViewModel
+        var viewModel = dependencyContainer.cafeViewModel
+        
+        viewModel.didSelectCell = { coffeeIndex in
+            print("didSelect coffee cell at:" + String(coffeeIndex))
+            self.showCafeDetailsViewController()
+        }
         
         let controller = dependencyContainer.cafeViewController(with: viewModel)
         
         return controller
+    }
+    
+    func showCafeDetailsViewController() {
+        var viewModel = dependencyContainer.cafeDetailsViewModel
+        
+        viewModel.didSelectBack = {
+            self.rootNavigationController.popViewController(animated: true)
+        }
+        
+        let controller = dependencyContainer.cafeDetailsViewController(with: viewModel)
+        
+        rootNavigationController.pushViewController(controller, animated: true)
     }
 }

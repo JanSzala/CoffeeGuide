@@ -8,5 +8,7 @@
 import Foundation
 
 internal protocol CafeViewModelType {
+    var didSelectCell: ((Int) -> ())? { get set }
+    
     var cafeCellIdentifier : String { get }
 }

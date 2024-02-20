@@ -15,4 +15,5 @@ internal protocol FlowControllerType {
     func coffeeViewController() -> UIViewController
     func showCoffeeDetailsViewController()
     func cafeViewController() -> UIViewController
+    func showCafeDetailsViewController()
 }
