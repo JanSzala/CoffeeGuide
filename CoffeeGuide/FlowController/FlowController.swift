@@ -77,7 +77,6 @@ extension FlowController {
         var viewModel = dependencyContainer.cafeViewModel
         
         viewModel.didSelectCell = { coffeeIndex in
-            print("didSelect coffee cell at:" + String(coffeeIndex))
             self.showCafeDetailsViewController()
         }
         

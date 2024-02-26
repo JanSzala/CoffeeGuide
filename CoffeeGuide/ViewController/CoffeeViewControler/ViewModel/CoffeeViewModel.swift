@@ -11,5 +11,4 @@ internal class CoffeeViewModel: CoffeeViewModelType {
     var didSelectCell: ((Int) -> ())?
     
     let cafeCellIdentifier = "CoffeeCollectionViewCell"
-    
 }
