@@ -40,6 +40,8 @@
 		22E278012B855495005AF2D1 /* CafeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E277FF2B855495005AF2D1 /* CafeDetailsViewController.xib */; };
 		22E278032B8554AA005AF2D1 /* CafeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E278022B8554AA005AF2D1 /* CafeDetailsViewModel.swift */; };
 		22E278052B8554B4005AF2D1 /* CafeDetailsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E278042B8554B4005AF2D1 /* CafeDetailsViewModelType.swift */; };
+		22F1A01B2B8D311D00714096 /* CoffeeInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F1A0192B8D311D00714096 /* CoffeeInformationCollectionViewCell.swift */; };
+		22F1A01C2B8D311D00714096 /* CoffeeInformationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F1A01A2B8D311D00714096 /* CoffeeInformationCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		22E277FF2B855495005AF2D1 /* CafeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeDetailsViewController.xib; sourceTree = "<group>"; };
 		22E278022B8554AA005AF2D1 /* CafeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailsViewModel.swift; sourceTree = "<group>"; };
 		22E278042B8554B4005AF2D1 /* CafeDetailsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailsViewModelType.swift; sourceTree = "<group>"; };
+		22F1A0192B8D311D00714096 /* CoffeeInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeInformationCollectionViewCell.swift; sourceTree = "<group>"; };
+		22F1A01A2B8D311D00714096 /* CoffeeInformationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeInformationCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		222FD90C299F7F2F0070E4A3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				22F1A0132B8D2E9D00714096 /* CoffeeDetails */,
 				22171C422B7BB45E007195BF /* CoffeeCollectionViewCell */,
 				227A2D372B717EC000E8E890 /* CafeCollectionViewCell */,
 			);
@@ -292,6 +297,23 @@
 			path = CafeDetailsViewModel;
 			sourceTree = "<group>";
 		};
+		22F1A0132B8D2E9D00714096 /* CoffeeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				22F1A0182B8D30F800714096 /* CoffeeInformationCollectionViewCell */,
+			);
+			path = CoffeeDetails;
+			sourceTree = "<group>";
+		};
+		22F1A0182B8D30F800714096 /* CoffeeInformationCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				22F1A0192B8D311D00714096 /* CoffeeInformationCollectionViewCell.swift */,
+				22F1A01A2B8D311D00714096 /* CoffeeInformationCollectionViewCell.xib */,
+			);
+			path = CoffeeInformationCollectionViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F1A01C2B8D311D00714096 /* CoffeeInformationCollectionViewCell.xib in Resources */,
 				22171C462B7BB47B007195BF /* CoffeeCollectionViewCell.xib in Resources */,
 				22CB60322B7FABC50000AE74 /* CoffeeDetailsViewController.xib in Resources */,
 				22E278012B855495005AF2D1 /* CafeDetailsViewController.xib in Resources */,
@@ -381,6 +404,7 @@
 				223F25C3289BEE000010D51C /* AppDelegate.swift in Sources */,
 				222FD905299E609B0070E4A3 /* CoffeeViewModel.swift in Sources */,
 				22525D1428A1559700B061D7 /* DependencyContainerType.swift in Sources */,
+				22F1A01B2B8D311D00714096 /* CoffeeInformationCollectionViewCell.swift in Sources */,
 				222FD90A299F789E0070E4A3 /* Coffee.swift in Sources */,
 				22171C4D2B7D0BCB007195BF /* CoffeeViewController.swift in Sources */,
 				22171C492B7BB6FE007195BF /* CafeCollectionViewCell.swift in Sources */,
@@ -539,7 +563,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -573,7 +597,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

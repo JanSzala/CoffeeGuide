@@ -37,7 +37,7 @@ class CoffeeDetailsViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        let cafeCellNib = UINib.init(nibName: "CoffeeCollectionViewCell", bundle: nil)
+        let cafeCellNib = UINib.init(nibName: viewModel?.cafeCellIdentifier ?? "Cell", bundle: nil)
         collectionView.register(cafeCellNib, forCellWithReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell")
     }
     
@@ -52,19 +52,44 @@ class CoffeeDetailsViewController: UIViewController {
 
 extension CoffeeDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell", for: indexPath) as! CoffeeInformationCollectionViewCell
+        
+        if indexPath.row == 0 {
+            cell.topLabelText(text: "Producer:")
+            cell.bottomLabelText(text: (viewModel?.testCoffee.producer)!)
+        }
+        
+        if indexPath.row == 1 {
+            cell.topLabelText(text: "Country:")
+            cell.bottomLabelText(text: (viewModel?.testCoffee.country)!)
+        }
+        
+        if indexPath.row == 2 {
+            cell.topLabelText(text: "Region:")
+            cell.bottomLabelText(text: (viewModel?.testCoffee.region)!)
+        }
+        
+        if indexPath.row == 3 {
+            cell.topLabelText(text: "Location:")
+            cell.bottomLabelText(text: (viewModel?.testCoffee.location)!)
+        }
+        
+        if indexPath.row == 4 {
+            cell.topLabelText(text: "Roasting plant:")
+            cell.bottomLabelText(text: (viewModel?.testCoffee.roastingPlant)!)
+        }
         
         return cell
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let spacing = 28.0
-        let cellSide: CGFloat = (collectionView.frame.size.width - spacing) / 2.0
-        return CGSize(width: cellSide, height: cellSide)
+        let cellSide: CGFloat = (collectionView.frame.size.width - spacing)
+        return CGSize(width: cellSide, height: cellSide / 5)
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

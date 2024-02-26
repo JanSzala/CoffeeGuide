@@ -8,6 +8,7 @@
 import UIKit
 
 class CafeDetailsViewController: UIViewController {
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel: CafeDetailsViewModelType?
 

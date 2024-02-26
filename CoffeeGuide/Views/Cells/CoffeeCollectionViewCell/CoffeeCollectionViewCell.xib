@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZvZ-xV-gha">
                         <rect key="frame" x="0.0" y="0.0" width="265" height="251"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3a-il-UPF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3a-il-UPF">
                                 <rect key="frame" x="10" y="220" width="245" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -36,9 +36,9 @@
                             <constraint firstAttribute="trailing" secondItem="i3a-il-UPF" secondAttribute="trailing" constant="10" id="6Og-Gv-JvX"/>
                             <constraint firstItem="Ibv-pY-8in" firstAttribute="leading" secondItem="ZvZ-xV-gha" secondAttribute="leading" constant="10" id="9Cj-O6-EY3"/>
                             <constraint firstAttribute="trailing" secondItem="Ibv-pY-8in" secondAttribute="trailing" constant="10" id="WfC-gU-STc"/>
-                            <constraint firstAttribute="bottom" secondItem="i3a-il-UPF" secondAttribute="bottom" constant="10" id="apA-IB-aNk"/>
+                            <constraint firstAttribute="bottom" secondItem="i3a-il-UPF" secondAttribute="bottom" constant="12" id="apA-IB-aNk"/>
                             <constraint firstItem="Ibv-pY-8in" firstAttribute="top" secondItem="ZvZ-xV-gha" secondAttribute="top" constant="10" id="beI-rb-31x"/>
-                            <constraint firstItem="i3a-il-UPF" firstAttribute="top" secondItem="Ibv-pY-8in" secondAttribute="bottom" constant="10" id="c7q-Kh-Au6"/>
+                            <constraint firstItem="i3a-il-UPF" firstAttribute="top" secondItem="Ibv-pY-8in" secondAttribute="bottom" constant="5" id="c7q-Kh-Au6"/>
                             <constraint firstItem="i3a-il-UPF" firstAttribute="leading" secondItem="ZvZ-xV-gha" secondAttribute="leading" constant="10" id="qDq-Ig-uKn"/>
                         </constraints>
                     </view>
@@ -63,7 +63,7 @@
     <resources>
         <image name="CoffeeFiveElephant" width="542.66668701171875" height="423.33334350585938"/>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CoffeeInformationCollectionViewCell" id="gTV-IL-0wX" customClass="CoffeeInformationCollectionViewCell" customModule="CoffeeGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="88"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="441" height="88"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Top Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEK-eL-Pet">
+                        <rect key="frame" x="10" y="10" width="421" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Bottom Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pat-8D-bNd">
+                        <rect key="frame" x="10" y="41" width="421" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" systemColor="systemBlueColor"/>
+            <constraints>
+                <constraint firstItem="CEK-eL-Pet" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="0Oz-Jp-MDa"/>
+                <constraint firstAttribute="trailing" secondItem="Pat-8D-bNd" secondAttribute="trailing" constant="10" id="4UC-xh-BDT"/>
+                <constraint firstAttribute="trailing" secondItem="CEK-eL-Pet" secondAttribute="trailing" constant="10" id="J9Q-Zj-JL4"/>
+                <constraint firstItem="Pat-8D-bNd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="LDk-Zy-4e5"/>
+                <constraint firstItem="Pat-8D-bNd" firstAttribute="top" secondItem="CEK-eL-Pet" secondAttribute="bottom" priority="999" constant="5" id="S5h-T6-cuK"/>
+                <constraint firstItem="CEK-eL-Pet" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="hW7-t6-T7O"/>
+                <constraint firstAttribute="bottom" secondItem="Pat-8D-bNd" secondAttribute="bottom" constant="5" id="knV-1T-k3A"/>
+            </constraints>
+            <size key="customSize" width="441" height="88"/>
+            <connections>
+                <outlet property="bottomLabel" destination="Pat-8D-bNd" id="WUA-0v-MKd"/>
+                <outlet property="topLabel" destination="CEK-eL-Pet" id="wqu-UE-Kbt"/>
+            </connections>
+            <point key="canvasLocation" x="350.38167938931298" y="33.098591549295776"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

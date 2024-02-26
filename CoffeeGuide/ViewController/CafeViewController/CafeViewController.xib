@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GPy-1z-71e">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="layoutMargins" id="Stv-K1-3mj">
                         <size key="itemSize" width="0.0" height="0.0"/>
@@ -36,11 +36,12 @@
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="GPy-1z-71e" secondAttribute="trailing" id="3DR-cK-a3L"/>
-                <constraint firstItem="GPy-1z-71e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="N1V-4g-c5q"/>
-                <constraint firstAttribute="bottom" secondItem="GPy-1z-71e" secondAttribute="bottom" id="NcM-SD-0XH"/>
-                <constraint firstItem="GPy-1z-71e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nyL-As-lJr"/>
+                <constraint firstAttribute="bottom" secondItem="GPy-1z-71e" secondAttribute="bottom" id="MiS-AC-oBR"/>
+                <constraint firstItem="GPy-1z-71e" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ViX-JR-xRe"/>
+                <constraint firstItem="GPy-1z-71e" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="g9K-4i-r2h"/>
+                <constraint firstItem="GPy-1z-71e" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="v6J-OZ-hJb"/>
             </constraints>
             <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>

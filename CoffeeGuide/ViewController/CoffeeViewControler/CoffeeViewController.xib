@@ -32,6 +32,7 @@
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="ILA-Kf-aDF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="enl-fA-46j"/>
                 <constraint firstItem="ILA-Kf-aDF" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="oKL-TG-aKf"/>

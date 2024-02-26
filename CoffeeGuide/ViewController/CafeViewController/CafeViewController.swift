@@ -36,7 +36,7 @@ internal class CafeViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        let cafeCellNib = UINib.init(nibName: "CafeCollectionViewCell", bundle: nil)
+        let cafeCellNib = UINib.init(nibName: viewModel?.cafeCellIdentifier ?? "Cell", bundle: nil)
         collectionView.register(cafeCellNib, forCellWithReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell")
     }
     
