@@ -39,6 +39,9 @@ class CoffeeDetailsViewController: UIViewController {
         
         let cafeCellNib = UINib.init(nibName: viewModel?.cafeCellIdentifier ?? "Cell", bundle: nil)
         collectionView.register(cafeCellNib, forCellWithReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell")
+        
+        let imageCellNib = UINib.init(nibName: viewModel?.imageCellIdentifier ?? "Cell", bundle: nil)
+        collectionView.register(imageCellNib, forCellWithReuseIdentifier: viewModel?.imageCellIdentifier ?? "Cell")
     }
     
     private func setupCollectionViewFlowLayout() {
@@ -56,44 +59,61 @@ extension CoffeeDetailsViewController: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell", for: indexPath) as! CoffeeInformationCollectionViewCell
-        
-        if indexPath.row == 0 {
-            cell.topLabelText(text: "Producer:")
-            cell.bottomLabelText(text: (viewModel?.testCoffee.producer)!)
-        }
-        
-        if indexPath.row == 1 {
-            cell.topLabelText(text: "Country:")
-            cell.bottomLabelText(text: (viewModel?.testCoffee.country)!)
-        }
-        
-        if indexPath.row == 2 {
-            cell.topLabelText(text: "Region:")
-            cell.bottomLabelText(text: (viewModel?.testCoffee.region)!)
-        }
-        
-        if indexPath.row == 3 {
-            cell.topLabelText(text: "Location:")
-            cell.bottomLabelText(text: (viewModel?.testCoffee.location)!)
-        }
-        
-        if indexPath.row == 4 {
-            cell.topLabelText(text: "Roasting plant:")
-            cell.bottomLabelText(text: (viewModel?.testCoffee.roastingPlant)!)
-        }
-        
-        return cell
+        return cellType(for: indexPath)
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let spacing = 28.0
         let cellSide: CGFloat = (collectionView.frame.size.width - spacing)
-        return CGSize(width: cellSide, height: cellSide / 5)
+        
+        if indexPath.row == 0 {
+            return CGSize(width: cellSide, height: cellSide)
+        } else {
+            return CGSize(width: cellSide, height: cellSide / 5)
+        }
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
            return UIEdgeInsets(top: 2, left: 10, bottom: 0, right: 10)
+    }
+    
+    private func cellType(for indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.row == 0 {
+            var cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel?.imageCellIdentifier ?? "Cell", for: indexPath) as! ImageCollectionViewCell
+            
+            cell.setupImage(image: UIImage(imageLiteralResourceName: "CoffeeFiveElephant"))
+            
+            return cell
+        } else {
+            var cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell", for: indexPath) as! CoffeeInformationCollectionViewCell
+            
+            if indexPath.row == 1 {
+                cell.topLabelText(text: "Producer:")
+                cell.bottomLabelText(text: (viewModel?.testCoffee.producer)!)
+            }
+            
+            if indexPath.row == 2 {
+                cell.topLabelText(text: "Country:")
+                cell.bottomLabelText(text: (viewModel?.testCoffee.country)!)
+            }
+            
+            if indexPath.row == 3 {
+                cell.topLabelText(text: "Region:")
+                cell.bottomLabelText(text: (viewModel?.testCoffee.region)!)
+            }
+            
+            if indexPath.row == 4 {
+                cell.topLabelText(text: "Location:")
+                cell.bottomLabelText(text: (viewModel?.testCoffee.location)!)
+            }
+            
+            if indexPath.row == 5 {
+                cell.topLabelText(text: "Roasting plant:")
+                cell.bottomLabelText(text: (viewModel?.testCoffee.roastingPlant)!)
+            }
+            
+            return cell
+        }
     }
 }
 

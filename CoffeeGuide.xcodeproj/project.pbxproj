@@ -13,6 +13,8 @@
 		22171C4A2B7BB6FE007195BF /* CafeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22171C482B7BB6FE007195BF /* CafeCollectionViewCell.xib */; };
 		22171C4D2B7D0BCB007195BF /* CoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22171C4B2B7D0BCB007195BF /* CoffeeViewController.swift */; };
 		22171C4E2B7D0BCB007195BF /* CoffeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22171C4C2B7D0BCB007195BF /* CoffeeViewController.xib */; };
+		222322062B8FE00B0055768F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222322042B8FE00B0055768F /* ImageCollectionViewCell.swift */; };
+		222322072B8FE00B0055768F /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222322052B8FE00B0055768F /* ImageCollectionViewCell.xib */; };
 		222FD905299E609B0070E4A3 /* CoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FD904299E609B0070E4A3 /* CoffeeViewModel.swift */; };
 		222FD907299E60AC0070E4A3 /* CoffeeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FD906299E60AC0070E4A3 /* CoffeeViewModelType.swift */; };
 		222FD90A299F789E0070E4A3 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FD909299F789E0070E4A3 /* Coffee.swift */; };
@@ -51,6 +53,8 @@
 		22171C482B7BB6FE007195BF /* CafeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeCollectionViewCell.xib; sourceTree = "<group>"; };
 		22171C4B2B7D0BCB007195BF /* CoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewController.swift; sourceTree = "<group>"; };
 		22171C4C2B7D0BCB007195BF /* CoffeeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeViewController.xib; sourceTree = "<group>"; };
+		222322042B8FE00B0055768F /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		222322052B8FE00B0055768F /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		222FD904299E609B0070E4A3 /* CoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewModel.swift; sourceTree = "<group>"; };
 		222FD906299E60AC0070E4A3 /* CoffeeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewModelType.swift; sourceTree = "<group>"; };
 		222FD909299F789E0070E4A3 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
@@ -102,6 +106,15 @@
 				22171C442B7BB47B007195BF /* CoffeeCollectionViewCell.xib */,
 			);
 			path = CoffeeCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		222322032B8FDFED0055768F /* IImageCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				222322042B8FE00B0055768F /* ImageCollectionViewCell.swift */,
+				222322052B8FE00B0055768F /* ImageCollectionViewCell.xib */,
+			);
+			path = IImageCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		222FD900299E60660070E4A3 /* CoffeeViewControler */ = {
@@ -300,6 +313,7 @@
 		22F1A0132B8D2E9D00714096 /* CoffeeDetails */ = {
 			isa = PBXGroup;
 			children = (
+				222322032B8FDFED0055768F /* IImageCollectionViewCell */,
 				22F1A0182B8D30F800714096 /* CoffeeInformationCollectionViewCell */,
 			);
 			path = CoffeeDetails;
@@ -376,6 +390,7 @@
 				22171C462B7BB47B007195BF /* CoffeeCollectionViewCell.xib in Resources */,
 				22CB60322B7FABC50000AE74 /* CoffeeDetailsViewController.xib in Resources */,
 				22E278012B855495005AF2D1 /* CafeDetailsViewController.xib in Resources */,
+				222322072B8FE00B0055768F /* ImageCollectionViewCell.xib in Resources */,
 				22171C4E2B7D0BCB007195BF /* CoffeeViewController.xib in Resources */,
 				223F25CF289BEE010010D51C /* LaunchScreen.storyboard in Resources */,
 				228539402B717914001DC26F /* CafeViewController.xib in Resources */,
@@ -406,6 +421,7 @@
 				22525D1428A1559700B061D7 /* DependencyContainerType.swift in Sources */,
 				22F1A01B2B8D311D00714096 /* CoffeeInformationCollectionViewCell.swift in Sources */,
 				222FD90A299F789E0070E4A3 /* Coffee.swift in Sources */,
+				222322062B8FE00B0055768F /* ImageCollectionViewCell.swift in Sources */,
 				22171C4D2B7D0BCB007195BF /* CoffeeViewController.swift in Sources */,
 				22171C492B7BB6FE007195BF /* CafeCollectionViewCell.swift in Sources */,
 				22CB60372B7FABFA0000AE74 /* CoffeeDetailsViewModelType.swift in Sources */,

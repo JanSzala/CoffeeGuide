@@ -12,6 +12,7 @@ internal class CoffeeDetailsViewModel: CoffeeDetailsViewModelType {
     var didSelectBack: (() -> ())?
     
     let cafeCellIdentifier = "CoffeeInformationCollectionViewCell"
+    let imageCellIdentifier = "ImageCollectionViewCell"
     
     var testCoffee = Coffee(image: UIImage(imageLiteralResourceName: "CoffeeFiveElephant"),
                         roastingPlant: "Five Elephant",
