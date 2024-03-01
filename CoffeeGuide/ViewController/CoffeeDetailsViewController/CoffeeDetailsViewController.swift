@@ -24,7 +24,7 @@ class CoffeeDetailsViewController: UIViewController {
         super.init(coder: aDecoder)
         self.viewModel = nil
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,13 +79,13 @@ extension CoffeeDetailsViewController: UICollectionViewDelegate, UICollectionVie
     
     private func cellType(for indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
-            var cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel?.imageCellIdentifier ?? "Cell", for: indexPath) as! ImageCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel?.imageCellIdentifier ?? "Cell", for: indexPath) as! ImageCollectionViewCell
             
             cell.setupImage(image: UIImage(imageLiteralResourceName: "CoffeeFiveElephant"))
             
             return cell
         } else {
-            var cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell", for: indexPath) as! CoffeeInformationCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell", for: indexPath) as! CoffeeInformationCollectionViewCell
             
             if indexPath.row == 1 {
                 cell.topLabelText(text: "Producer:")
@@ -120,9 +120,9 @@ extension CoffeeDetailsViewController: UICollectionViewDelegate, UICollectionVie
 private extension CoffeeDetailsViewController {
     private func setUpNavBar() {
         self.navigationController?.navigationBar.isHidden = false
-        self.navigationItem.title = "Coffee Details"
+        self.navigationItem.title = viewModel?.controllerTitle
 
-        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(didSelectBackButton))
+        let backButton = UIBarButtonItem(title: viewModel?.backButtonTitle, style: .plain, target: self, action: #selector(didSelectBackButton))
         navigationItem.leftBarButtonItem = backButton
     }
     

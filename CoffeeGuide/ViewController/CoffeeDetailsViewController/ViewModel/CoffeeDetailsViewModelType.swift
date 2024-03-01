@@ -12,5 +12,9 @@ internal protocol CoffeeDetailsViewModelType {
     
     var cafeCellIdentifier: String { get }
     var imageCellIdentifier: String { get }
+    
+    var backButtonTitle: String { get }
+    var controllerTitle: String { get }
+    
     var testCoffee: Coffee { get }
 }

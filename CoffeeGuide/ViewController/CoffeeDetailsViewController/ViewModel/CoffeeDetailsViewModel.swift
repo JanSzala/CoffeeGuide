@@ -14,6 +14,9 @@ internal class CoffeeDetailsViewModel: CoffeeDetailsViewModelType {
     let cafeCellIdentifier = "CoffeeInformationCollectionViewCell"
     let imageCellIdentifier = "ImageCollectionViewCell"
     
+    let backButtonTitle = "Back"
+    let controllerTitle = "Coffee Details"
+    
     var testCoffee = Coffee(image: UIImage(imageLiteralResourceName: "CoffeeFiveElephant"),
                         roastingPlant: "Five Elephant",
                         name: "Brazylia Sitio Canaa Sumatra",

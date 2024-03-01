@@ -9,4 +9,7 @@ import Foundation
 
 internal class CafeDetailsViewModel: CafeDetailsViewModelType {
     var didSelectBack: (() -> ())?
+    
+    let backButtonTitle = "Back"
+    let controllerTitle = "Cafe Details"
 }

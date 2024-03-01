@@ -32,9 +32,9 @@ class CafeDetailsViewController: UIViewController {
 private extension CafeDetailsViewController {
     private func setUpNavBar() {
         self.navigationController?.navigationBar.isHidden = false
-        self.navigationItem.title = "Cafe Details"
+        self.navigationItem.title = viewModel?.controllerTitle
 
-        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(didSelectBackButton))
+        let backButton = UIBarButtonItem(title: viewModel?.backButtonTitle, style: .plain, target: self, action: #selector(didSelectBackButton))
         navigationItem.leftBarButtonItem = backButton
     }
     
