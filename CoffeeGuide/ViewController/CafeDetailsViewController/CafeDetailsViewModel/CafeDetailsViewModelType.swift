@@ -10,6 +10,9 @@ import Foundation
 internal protocol CafeDetailsViewModelType {
     var didSelectBack: (() -> ())? { get set }
     
+    var cafeCellIdentifier: String { get }
+    var imageCellIdentifier: String { get }
+    
     var backButtonTitle: String { get }
     var controllerTitle: String { get }
 }
