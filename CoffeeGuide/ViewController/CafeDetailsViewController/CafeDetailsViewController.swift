@@ -84,6 +84,11 @@ extension CafeDetailsViewController: UICollectionViewDelegate, UICollectionViewD
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel?.cafeCellIdentifier ?? "Cell", for: indexPath) as! CoffeeInformationCollectionViewCell
             
+            if indexPath.row == 1 {
+                cell.topLabelText(text: "Producer:")
+                cell.bottomLabelText(text: (viewModel?.testCafe.name)!)
+            }
+            
             return cell
         }
     }

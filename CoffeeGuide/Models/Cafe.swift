@@ -18,7 +18,7 @@ class Cafe {
     var street: String
     var streetNumber: String
     
-    init(image: UIImage, roastingPlant: String, name: String, description: String, country: String, city: String, street: String, streetNumber: String) {
+    init(image: UIImage, name: String, description: String, country: String, city: String, street: String, streetNumber: String) {
         self.image = image
         self.name = name
         self.description = description

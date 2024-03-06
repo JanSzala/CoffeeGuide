@@ -15,4 +15,6 @@ internal protocol CafeDetailsViewModelType {
     
     var backButtonTitle: String { get }
     var controllerTitle: String { get }
+    
+    var testCafe: Cafe { get }
 }
