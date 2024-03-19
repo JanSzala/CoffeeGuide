@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import LifetimeTracker
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -21,6 +22,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+#if DEBUG
+    LifetimeTracker.setup(
+        onUpdate: LifetimeTrackerDashboardIntegration(
+            visibility: .alwaysVisible,
+            style: .bar,
+            textColorForNoIssues: .systemGreen,
+            textColorForLeakDetected: .systemRed
+        ).refreshUI
+    )
+#endif
         
         let navigationController = rootNavigationController
         navigationController.navigationBar.isHidden = false

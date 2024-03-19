@@ -1,0 +1,19 @@
+{
+  "commitish" : "1.8.3",
+  "iOS" : [
+    {
+      "swiftToolchainVersion" : "5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)",
+      "hash" : "7e443bc1209ab7fb6fe5103214410810662ce28ab0515ac8ca8f5ed992ba5319",
+      "name" : "LifetimeTracker",
+      "container" : "LifetimeTracker.xcframework",
+      "identifier" : "ios-arm64_x86_64-simulator"
+    },
+    {
+      "swiftToolchainVersion" : "5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)",
+      "hash" : "231b03969688237486ea4dea791a14c88d1425035aebcb19f5452101b9f08e22",
+      "name" : "LifetimeTracker",
+      "container" : "LifetimeTracker.xcframework",
+      "identifier" : "ios-arm64"
+    }
+  ]
+}
