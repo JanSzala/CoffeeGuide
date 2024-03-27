@@ -22,6 +22,7 @@ internal class FlowController: FlowControllerType {
     }
     
     let coffeeNavigationController = UINavigationController()
+    let addNavigationController = UINavigationController()
     let cafeNavigationController = UINavigationController()
 }
 
@@ -30,6 +31,10 @@ extension FlowController {
         coffeeNavigationController.viewControllers = [coffeeViewController()]
         coffeeNavigationController.title = "Coffee"
         coffeeNavigationController.navigationBar.isHidden = true
+        
+        addNavigationController.viewControllers = [addViewController()]
+        addNavigationController.title = "ADD"
+        addNavigationController.navigationBar.isHidden = true
         
         cafeNavigationController.viewControllers = [cafeViewController()]
         cafeNavigationController.title = "Cafe"
@@ -57,6 +62,18 @@ extension FlowController {
         
         let controller = dependencyContainer.coffeeViewController(with: viewModel)
         
+        
+        return controller
+    }
+    
+    func addViewController() -> UIViewController {
+        var viewModel = dependencyContainer.addViewModel
+                
+        let controller = dependencyContainer.addViewController(with: viewModel)
+        
+        viewModel.didSelectBack = {
+            self.rootNavigationController.popViewController(animated: true)
+        }
         
         return controller
     }

@@ -41,6 +41,14 @@ internal class DependencyContainer: DependencyContainerType {
         CafeViewModel()
     }
     
+    func addViewController(with viewModel: AddViewModelType) -> AddViewController {
+        AddViewController(viewModel: viewModel)
+    }
+    
+    var addViewModel: AddViewModelType {
+        AddViewModel()
+    }
+    
     func cafeDetailsViewController(with viewModel: CafeDetailsViewModelType) -> CafeDetailsViewController {
         CafeDetailsViewController(viewModel: viewModel)
     }
