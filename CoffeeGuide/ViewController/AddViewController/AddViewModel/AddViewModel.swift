@@ -7,8 +7,6 @@
 
 import Foundation
 
-internal class AddViewModel: AddViewModelType {
-    var didSelectBack: (() -> ())?
-    
+internal class AddViewModel: AddViewModelType {    
     let backButtonTitle = "Back"
 }

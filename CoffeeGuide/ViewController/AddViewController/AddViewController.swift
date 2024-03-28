@@ -24,17 +24,3 @@ class AddViewController: UIViewController {
         super.viewDidLoad()
     }
 }
-
-private extension AddViewController {
-    private func setUpNavBar() {
-        self.navigationController?.navigationBar.isHidden = false
-
-        let backButton = UIBarButtonItem(title: viewModel?.backButtonTitle, style: .plain, target: self, action: #selector(didSelectBackButton))
-        navigationItem.leftBarButtonItem = backButton
-    }
-    
-    @objc func didSelectBackButton() {
-        viewModel?.didSelectBack?()
-    }
-}
-

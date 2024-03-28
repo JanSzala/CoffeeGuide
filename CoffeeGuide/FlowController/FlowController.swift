@@ -33,14 +33,14 @@ extension FlowController {
         coffeeNavigationController.navigationBar.isHidden = true
         
         addNavigationController.viewControllers = [addViewController()]
-        addNavigationController.title = "ADD"
+        addNavigationController.title = "( + )"
         addNavigationController.navigationBar.isHidden = true
         
         cafeNavigationController.viewControllers = [cafeViewController()]
         cafeNavigationController.title = "Cafe"
         cafeNavigationController.navigationBar.isHidden = true
         
-        return [coffeeNavigationController, cafeNavigationController]
+        return [coffeeNavigationController, addNavigationController, cafeNavigationController]
     }
     
     func showMenuViewController() {
@@ -70,11 +70,7 @@ extension FlowController {
         var viewModel = dependencyContainer.addViewModel
                 
         let controller = dependencyContainer.addViewController(with: viewModel)
-        
-        viewModel.didSelectBack = {
-            self.rootNavigationController.popViewController(animated: true)
-        }
-        
+                
         return controller
     }
     

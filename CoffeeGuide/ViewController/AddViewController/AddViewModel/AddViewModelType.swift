@@ -7,8 +7,6 @@
 
 import Foundation
 
-internal protocol AddViewModelType {
-    var didSelectBack: (() -> ())? { get set }
-    
+internal protocol AddViewModelType {    
     var backButtonTitle: String { get }
 }
