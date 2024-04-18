@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddViewController" customModule="CoffeeGuide" customModuleProvider="target">
             <connections>
+                <outlet property="cafeButton" destination="hX9-31-JsX" id="CRz-dI-O6S"/>
+                <outlet property="coffeeButton" destination="dzm-g0-QaQ" id="D3e-j7-drc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

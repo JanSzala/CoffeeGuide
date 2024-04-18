@@ -8,5 +8,4 @@
 import Foundation
 
 internal protocol AddViewModelType {    
-    var backButtonTitle: String { get }
 }

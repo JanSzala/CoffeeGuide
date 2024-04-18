@@ -62,13 +62,12 @@ extension FlowController {
         
         let controller = dependencyContainer.coffeeViewController(with: viewModel)
         
-        
         return controller
     }
     
     func addViewController() -> UIViewController {
         var viewModel = dependencyContainer.addViewModel
-                
+                        
         let controller = dependencyContainer.addViewController(with: viewModel)
                 
         return controller
@@ -77,11 +76,11 @@ extension FlowController {
     func showCoffeeDetailsViewController() {
         var viewModel = dependencyContainer.coffeeDetailsViewModel
         
-        let controller = dependencyContainer.coffeeDetailsViewController(with: viewModel)
-        
         viewModel.didSelectBack = {
             self.rootNavigationController.popViewController(animated: true)
         }
+        
+        let controller = dependencyContainer.coffeeDetailsViewController(with: viewModel)
         
         rootNavigationController.pushViewController(controller, animated: true)
     }

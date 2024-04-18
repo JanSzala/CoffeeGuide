@@ -7,6 +7,5 @@
 
 import Foundation
 
-internal class AddViewModel: AddViewModelType {    
-    let backButtonTitle = "Back"
+internal class AddViewModel: AddViewModelType { 
 }

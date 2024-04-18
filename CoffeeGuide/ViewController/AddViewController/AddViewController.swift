@@ -7,7 +7,10 @@
 
 import UIKit
 
-class AddViewController: UIViewController {    
+class AddViewController: UIViewController {  
+    @IBOutlet weak var coffeeButton: UIButton!
+    @IBOutlet weak var cafeButton: UIButton!
+    
     var viewModel: AddViewModelType?
     
     init(viewModel: AddViewModelType) {
