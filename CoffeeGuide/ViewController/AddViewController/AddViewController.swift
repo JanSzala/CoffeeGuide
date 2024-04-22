@@ -25,5 +25,22 @@ class AddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupButtons()
+    }
+    
+    private func setupButtons() {
+        coffeeButton.addTarget(self, action:#selector(self.coffeeButtonClicked), for: .touchUpInside)
+        cafeButton.addTarget(self, action:#selector(self.cafeButtonClicked), for: .touchUpInside)
+    }
+}
+
+fileprivate extension AddViewController {
+    @objc func coffeeButtonClicked() {
+        print("Coffee Button Clicked")
+    }
+    
+    @objc func cafeButtonClicked() {
+        print("Cafe Button Clicked")
     }
 }
