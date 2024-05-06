@@ -37,10 +37,10 @@ class AddViewController: UIViewController {
 
 fileprivate extension AddViewController {
     @objc func coffeeButtonClicked() {
-        print("Coffee Button Clicked")
+        viewModel?.onAddCoffeeClicked?()
     }
     
     @objc func cafeButtonClicked() {
-        print("Cafe Button Clicked")
+        viewModel?.onAddCafeClicked?()
     }
 }

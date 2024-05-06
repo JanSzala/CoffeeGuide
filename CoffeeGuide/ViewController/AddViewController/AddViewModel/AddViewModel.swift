@@ -7,5 +7,7 @@
 
 import Foundation
 
-internal class AddViewModel: AddViewModelType { 
+internal class AddViewModel: AddViewModelType {
+    var onAddCoffeeClicked: (() -> ())?
+    var onAddCafeClicked: (() -> ())?
 }

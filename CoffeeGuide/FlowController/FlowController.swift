@@ -67,6 +67,14 @@ extension FlowController {
     
     func addViewController() -> UIViewController {
         var viewModel = dependencyContainer.addViewModel
+        
+        viewModel.onAddCafeClicked = {
+            print("Add presenting AddCafeController")
+        }
+        
+        viewModel.onAddCoffeeClicked = {
+            print("Add presenting AddCoffeeController")
+        }
                         
         let controller = dependencyContainer.addViewController(with: viewModel)
                 

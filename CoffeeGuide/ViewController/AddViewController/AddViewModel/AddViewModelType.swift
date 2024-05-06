@@ -7,5 +7,7 @@
 
 import Foundation
 
-internal protocol AddViewModelType {    
+internal protocol AddViewModelType {   
+    var onAddCoffeeClicked: (() -> ())? { get set }
+    var onAddCafeClicked: (() -> ())? { get set }
 }
